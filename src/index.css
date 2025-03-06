@@ -1,23 +1,35 @@
 html,
 body {
     height: 100vh;
-    width: 100vw;
 }
 
 body {
     margin: 0;
     font-size: 18px;
     height: 100%;
-    width: 100%;
     color: #000000;
-    background: #ffffff;
+    background: #e9f2f9;
+    overflow-y: scroll;
     font-family:
-        -apple-system, "Open Sans", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-        "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        -apple-system,"Montserrat", "Open Sans", "Segoe UI", "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     z-index: 1;
 }
+
+::-webkit-scrollbar {
+    height: 3px;
+    width: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 5px #000000;
+}
+
 
 code {
     font-family:
