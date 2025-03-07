@@ -43,6 +43,12 @@
     background-color: #ffffff;
     color: #6e7880;
     font-size: 21px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: #0d92ffd9;
+    color: #ffffff;
 }
 
 .sections {

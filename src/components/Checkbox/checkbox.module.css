@@ -43,7 +43,7 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background: no-repeat url("/public/vector.png");
+    background: no-repeat url("/public/check-mark.svg");
     box-sizing: border-box;
     z-index: 3;
 }
