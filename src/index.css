@@ -10,7 +10,8 @@ body {
     background: #e9f2f9;
     overflow-y: scroll;
     font-family:
-        -apple-system,"Montserrat", "Open Sans", "Segoe UI", "Roboto", sans-serif;
+        -apple-system, "Montserrat", "Open Sans", "Segoe UI", "Roboto",
+        sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     z-index: 1;
@@ -28,7 +29,6 @@ body {
     border-radius: 5px;
     box-shadow: inset 1px 1px 5px #000000;
 }
-
 
 code {
     font-family:
@@ -55,6 +55,10 @@ h4 {
 
 p {
     margin: 0;
+}
+
+button {
+    font-family: "Open Sans", sans-serif;
 }
 
 @media (orientation: portrait), (max-width: 770px) {

@@ -1,12 +1,11 @@
 import React from "react"
 import styles from "./styles.module.css"
-import { Filters, Grants } from "../../components"
+import { MainPage } from "../../pages"
 
 const Content: React.FC = () => {
     return (
         <div className={styles.content}>
-            <Filters />
-            <Grants />
+            <MainPage />
         </div>
     )
 }

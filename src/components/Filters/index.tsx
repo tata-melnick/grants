@@ -15,7 +15,7 @@ const Filters: React.FC = () => {
             <div className={styles.sections}>
                 <div className={styles.section}>
                     <h3 className={styles.titleSection}>Название раздела</h3>
-                    <div className={styles.filtre}>
+                    <div className={styles.filter}>
                         <Checkbox />
                         <Checkbox />
                         <Checkbox />
@@ -24,7 +24,7 @@ const Filters: React.FC = () => {
                 </div>
                 <div className={styles.section}>
                     <h3 className={styles.titleSection}>Название раздела</h3>
-                    <div className={styles.filtre}>
+                    <div className={styles.filter}>
                         <Radio />
                         <Radio />
                         <Radio />
