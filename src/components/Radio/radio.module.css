@@ -1,0 +1,53 @@
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+    width: 100%;
+}
+
+.labelText {
+    margin-left: 50px;
+    color: #6e7880;
+}
+
+.radio {
+    font-size: 21px;
+    display: inline-block;
+    color: #6e7880;
+    height: 30px;
+    flex-shrink: 0;
+    user-select: none;
+    position: relative;
+    z-index: 2;
+}
+
+.radio:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    border-radius: 25px;
+    background: #dbe4eb;
+}
+
+.radio:after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 25%;
+    background: no-repeat url("/public/radio.svg");
+    box-sizing: border-box;
+    z-index: -3;
+}
+
+.radioOn:after:checked {
+    z-index: 3;
+}
