@@ -1,20 +1,20 @@
 import React from "react"
 import styles from "./grant.module.css"
+import { GrantType } from "../../../types"
 
-const Grant: React.FC = () => {
+interface IGrantProps {
+    detail: GrantType
+}
+
+const Grant: React.FC<IGrantProps> = ({ detail }) => {
+    const { name, description, provides, size, status } = detail
+
     return (
         <div className={styles.wrap}>
             <div className={styles.grant}>
                 <div className={styles.grantInfo}>
-                    <h2 className={styles.titleGrant}>Студенческий стартап</h2>
-                    <p className={styles.textGrant}>
-                        Программа направлена на выполнение работ студентами по
-                        разработке новых товаров, изделий, технологий или услуг
-                        с использованием результатов собственных
-                        научно-технических и технологических исследований,
-                        имеющих потенциал коммерциализации и находящихся на
-                        самой ранней стадии развития.
-                    </p>
+                    <h2 className={styles.titleGrant}>{name}</h2>
+                    <p className={styles.textGrant}>{description}</p>
                     <div className={styles.gradient}></div>
                 </div>
                 <button className={styles.btn}>Подробнее о программе</button>
@@ -22,19 +22,15 @@ const Grant: React.FC = () => {
             <div className={styles.info}>
                 <div>
                     <h3 className={styles.titleInfo}>Кто оказывает услуги</h3>
-                    <p className={styles.textInfo}>
-                        ФОНД Содействия Инновациям
-                    </p>
+                    <p className={styles.textInfo}>{provides}</p>
                 </div>
                 <div>
                     <h3 className={styles.titleInfo}>Статус конкурса</h3>
-                    <p className={styles.textInfo}>
-                        Прием заявок с 22.10.2023 по 25.11.2023
-                    </p>
+                    <p className={styles.textInfo}>{status}</p>
                 </div>
                 <div>
                     <h3 className={styles.titleInfo}>Размер гранта</h3>
-                    <p className={styles.textInfo}>1 млн. руб.</p>
+                    <p className={styles.textInfo}>{size}</p>
                 </div>
             </div>
         </div>
