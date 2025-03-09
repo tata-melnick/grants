@@ -61,6 +61,11 @@
     color: #ffffff;
     font-size: 24px;
     font-family: "Open Sans", sans-serif;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: #6a6ae5;
 }
 
 .info {
