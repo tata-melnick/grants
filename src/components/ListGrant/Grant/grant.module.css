@@ -1,0 +1,86 @@
+.wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 470px;
+}
+
+.grant {
+    background-color: #ffffff;
+    padding: 35px 40px 20px 40px;
+    height: 100%;
+    width: 62%;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+}
+
+.grantInfo {
+    position: relative;
+    height: 100%;
+}
+
+.titleGrant {
+    font-size: 38px;
+    margin-bottom: 30px;
+    height: max-content;
+}
+
+.textGrant {
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
+    color: #6e7880;
+    height: 53%;
+}
+
+.gradient {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(
+        180deg,
+        #ffffff00 0%,
+        #ffffff70 5%,
+        #ffffff 100%
+    );
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    border-radius: 20px;
+    border: none;
+    background: #45459d;
+    color: #ffffff;
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.info {
+    width: 38%;
+    height: 100%;
+    background-image: url("/public/substrate.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.titleInfo {
+    font-size: 28px;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 10px;
+}
+
+.textInfo {
+    font-size: 24px;
+    font-weight: lighter;
+}
