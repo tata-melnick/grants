@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    align-items: center;
+    margin: auto auto 0;
+    color: #0a0e35;
+    user-select: none;
+}
+
+.wrap {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrowForward {
+    transform: rotate(180deg);
+}
+
+.button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #6e7880;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+    background-color: #ffffff;
+    color: #2d4ef8;
+    border-radius: 10px;
+    box-shadow:
+        0 2px 20px #289fff,
+        15px 5px 5px #a2ccef00;
+}
+
+.delimiter {
+    pointer-events: none;
+}
+
+.delimiter:hover {
+    background: white;
+}
+
+.chevronButtonDisabled {
+    color: #ccc;
+    pointer-events: none;
+    border-color: #ccc;
+}
+
+.chevronButtonReverse > svg {
+    transform: rotate(180deg);
+}
