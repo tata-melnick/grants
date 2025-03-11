@@ -7,7 +7,7 @@ const Grants: React.FC = () => {
     return (
         <div className={styles.content}>
             <Search />
-            <ListGrant grants={[]} />
+            <ListGrant />
         </div>
     )
 }

@@ -17,17 +17,11 @@ const Filters: React.FC = () => {
                     <h3 className={styles.titleSection}>Название раздела</h3>
                     <div className={styles.filter}>
                         <Checkbox />
-                        <Checkbox />
-                        <Checkbox />
-                        <Checkbox />
                     </div>
                 </div>
                 <div className={styles.section}>
                     <h3 className={styles.titleSection}>Название раздела</h3>
                     <div className={styles.filter}>
-                        <Radio />
-                        <Radio />
-                        <Radio />
                         <Radio />
                     </div>
                 </div>

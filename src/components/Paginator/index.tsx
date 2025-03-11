@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
-import cn from "classnames"
-// import { BackIcon } from "../../icons"
+import cn from "classnames-ts"
 import styles from "./paginator.module.css"
 import rndStr from "../../helpers/randomStr"
 
@@ -48,11 +47,11 @@ const Paginator: React.FC<IPaginatorProps> = ({ page, count, onChange }) => {
         for (let i = 0; i < count; i++) newPages.push(i)
         handleSetRenderPages(newPages)
         setPages(newPages)
-    }, [])
+    }, [count])
 
     useEffect(() => {
         if (pages.length) handleSetRenderPages(pages)
-    }, [page, count])
+    }, [count, pages])
 
     if (!count || count <= 1) return null
 
@@ -73,8 +72,8 @@ const Paginator: React.FC<IPaginatorProps> = ({ page, count, onChange }) => {
                         <span
                             className={cn([
                                 styles.button,
-                                { [styles.buttonActive]: el === page },
-                                { [styles.delimiter]: el === null },
+                                el === page && styles.buttonActive,
+                                el === null && styles.delimiter,
                             ])}
                             key={`page-${el || rndStr()}`}
                             onClick={
@@ -89,7 +88,6 @@ const Paginator: React.FC<IPaginatorProps> = ({ page, count, onChange }) => {
                 className={cn([
                     styles.arrow,
                     styles.arrowForward,
-                    styles.chevronButtonReverse,
                     { [styles.chevronButtonDisabled]: page === count - 1 },
                 ])}
                 onClick={nextPage}
