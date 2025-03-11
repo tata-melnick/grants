@@ -16,8 +16,6 @@ const ListGrant: React.FC<IListGranProps> = ({ grants }) => {
     const [grantsOnPage, setGrantsOnPage] = useState<ListGrant>([])
     grants = GRANTS
 
-    console.log(grants)
-
     useEffect(() => {
         setGrantsOnPage(grants.slice(page * count, page * count + count))
     }, [page, grants])

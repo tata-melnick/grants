@@ -9,7 +9,7 @@
     background-color: #ffffff;
     padding: 35px 40px 20px 40px;
     height: 100%;
-    width: 62%;
+    width: 70%;
     border-radius: 40px;
     display: flex;
     flex-direction: column;
@@ -60,8 +60,8 @@
     background: #45459d;
     color: #ffffff;
     font-size: 24px;
-    font-family: "Open Sans", sans-serif;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -69,7 +69,7 @@
 }
 
 .info {
-    width: 38%;
+    width: 37%;
     height: 100%;
     background-image: url("/public/substrate.png");
     background-size: contain;

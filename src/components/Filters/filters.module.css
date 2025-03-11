@@ -1,5 +1,5 @@
 .content {
-    width: 26%;
+    width: 21.5%;
 }
 
 .wrap {
@@ -12,7 +12,7 @@
 .title {
     font-size: 34px;
     font-weight: 500;
-    margin-left: 20px;
+    padding-left: 20px;
 }
 
 .btnWrap {
@@ -44,6 +44,7 @@
     color: #6e7880;
     font-size: 21px;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -63,13 +64,12 @@
 .section {
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
+    gap: 45px;
 }
 
 .titleSection {
     font-size: 24px;
     font-weight: 500;
-    margin-bottom: 45px;
 }
 
 .filter {

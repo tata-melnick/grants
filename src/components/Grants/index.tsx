@@ -7,8 +7,7 @@ const Grants: React.FC = () => {
     return (
         <div className={styles.content}>
             <Search />
-            <ListGrant />
-            {/*<Paginator/>*/}
+            <ListGrant grants={[]} />
         </div>
     )
 }

@@ -10,7 +10,7 @@ body {
     background: #e9f2f9;
     overflow-y: scroll;
     font-family:
-        -apple-system, "Montserrat", "Open Sans", "Segoe UI", "Roboto",
+        "Montserrat", "Open Sans", "Segoe UI", "Roboto",
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -30,11 +30,6 @@ body {
     box-shadow: inset 1px 1px 5px #000000;
 }
 
-code {
-    font-family:
-        source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -47,8 +42,7 @@ a {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
     margin: 0;
     font-weight: normal;
 }
@@ -61,11 +55,11 @@ button {
     font-family: "Open Sans", sans-serif;
 }
 
-@media (orientation: portrait), (max-width: 770px) {
-}
-@media (orientation: landscape), (max-width: 1000px) {
-}
-@media (orientation: portrait), (max-width: 360px) {
-}
-@media (orientation: landscape), (max-width: 480px) {
-}
+/*@media (orientation: portrait), (max-width: 770px) {*/
+/*}*/
+/*@media (orientation: landscape), (max-width: 1000px) {*/
+/*}*/
+/*@media (orientation: portrait), (max-width: 360px) {*/
+/*}*/
+/*@media (orientation: landscape), (max-width: 480px) {*/
+/*}*/
