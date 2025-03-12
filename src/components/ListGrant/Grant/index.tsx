@@ -1,13 +1,17 @@
 import React from "react"
 import styles from "./grant.module.css"
 import { GrantType } from "../../../types"
+import { useNavigate } from "react-router-dom"
 
 interface IGrantProps {
     detail: GrantType
 }
 
 const Grant: React.FC<IGrantProps> = ({ detail }) => {
-    const { name, description, provides, size, status } = detail
+    const { id, name, description, provides, size, status } = detail
+    const navigate = useNavigate()
+
+    const goToProduct = () => navigate(`${"/detail"}?id=${id}`)
 
     return (
         <div className={styles.wrap}>
@@ -17,7 +21,9 @@ const Grant: React.FC<IGrantProps> = ({ detail }) => {
                     <p className={styles.textGrant}>{description}</p>
                     <div className={styles.gradient}></div>
                 </div>
-                <button className={styles.btn}>Подробнее о программе</button>
+                <button onClick={goToProduct} className={styles.btn}>
+                    Подробнее о программе
+                </button>
             </div>
             <div className={styles.info}>
                 <div>
