@@ -1,10 +1,10 @@
 import React from "react"
-import { MainPage } from "../../pages"
+import { Outlet } from "react-router-dom"
 
 const Content: React.FC = () => {
     return (
         <>
-            <MainPage />
+            <Outlet />
         </>
     )
 }
