@@ -53,6 +53,7 @@ p {
 
 button {
     font-family: "Open Sans", sans-serif;
+    cursor: pointer;
 }
 
 /*@media (orientation: portrait), (max-width: 770px) {*/
