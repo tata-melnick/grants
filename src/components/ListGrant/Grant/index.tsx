@@ -8,7 +8,7 @@ interface IGrantProps {
 }
 
 const Grant: React.FC<IGrantProps> = ({ detail }) => {
-    const { id, name, description, provides, size, status } = detail
+    const { id, name, description, provides, sum, status } = detail
     const navigate = useNavigate()
 
     const goToProduct = () => navigate(`${"/detail"}?id=${id}`)
@@ -32,11 +32,17 @@ const Grant: React.FC<IGrantProps> = ({ detail }) => {
                 </div>
                 <div>
                     <h3 className={styles.titleInfo}>Статус конкурса</h3>
-                    <p className={styles.textInfo}>{status}</p>
+                    <p className={styles.textInfo}>
+                        с {status.from} по {status.to}
+                    </p>
                 </div>
                 <div>
                     <h3 className={styles.titleInfo}>Размер гранта</h3>
-                    <p className={styles.textInfo}>{size}</p>
+                    {sum > 1 ? (
+                        <p className={styles.textInfo}>до {sum} млн руб.</p>
+                    ) : (
+                        <p className={styles.textInfo}>{sum} млн руб.</p>
+                    )}
                 </div>
             </div>
         </div>
