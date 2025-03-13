@@ -39,14 +39,14 @@
 .gradient {
     position: absolute;
     width: 100%;
-    height: 33%;
+    height: 40%;
     left: 0;
     bottom: 0;
     background: linear-gradient(
         180deg,
         #ffffff00 0%,
-        #ffffff60 5%,
-        #ffffff 55%
+        #ffffff40 0%,
+        #ffffff 65%
     );
 }
 
