@@ -23,7 +23,7 @@ const DetailPage: React.FC = () => {
                 </div>
                 <div className={styles.sections}>
                     <h3 className={styles.titleSections}>Разделы</h3>
-                    <ul className={styles.list}>
+                    <ol className={styles.list}>
                         <Link to={""}>
                             <li className={styles.item}>Краткая информация</li>
                         </Link>
@@ -37,7 +37,7 @@ const DetailPage: React.FC = () => {
                                 Требования для участия
                             </li>
                         </Link>
-                    </ul>
+                    </ol>
                 </div>
             </div>
         </div>
