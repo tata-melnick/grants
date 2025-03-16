@@ -9,11 +9,9 @@ import { observer } from "mobx-react-lite"
 const count = 3
 
 const ListGrant: React.FC = observer(() => {
-    const { list, grant } = Grants
+    const { list } = Grants
     const [page, setPage] = useState<number>(0)
     const [grantsOnPage, setGrantsOnPage] = useState<ListGrant>([])
-
-    console.log(grant)
 
     useEffect(() => {
         setGrantsOnPage(list.slice(page * count, page * count + count))

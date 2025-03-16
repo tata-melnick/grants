@@ -1,6 +1,6 @@
 export type Status = {
-    from: string
-    to: string
+    from?: string
+    to?: string
 }
 
 export type Lot = {
@@ -9,8 +9,8 @@ export type Lot = {
 }
 
 export type Ages = {
-    from: number
-    to: number
+    from?: number
+    to?: number
 }
 
 export type GrantType = {
@@ -19,6 +19,7 @@ export type GrantType = {
     description: string
     provides: string
     status: Status
+    endTime: number
     sum: number
     legalForm: string
     projectStage: string
