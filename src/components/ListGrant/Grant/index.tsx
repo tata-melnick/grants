@@ -11,7 +11,7 @@ const Grant: React.FC<IGrantProps> = ({ detail }) => {
     const { id, name, description, provides, sum, status } = detail
     const navigate = useNavigate()
 
-    const goToProduct = () => navigate(`${"/detail"}?id=${id}`)
+    const goToGrant = () => navigate(`detail/${id}`)
 
     return (
         <div className={styles.wrap}>
@@ -21,7 +21,7 @@ const Grant: React.FC<IGrantProps> = ({ detail }) => {
                     <p className={styles.textGrant}>{description}</p>
                     <div className={styles.gradient}></div>
                 </div>
-                <button onClick={goToProduct} className={styles.btn}>
+                <button onClick={goToGrant} className={styles.btn}>
                     Подробнее о программе
                 </button>
             </div>
