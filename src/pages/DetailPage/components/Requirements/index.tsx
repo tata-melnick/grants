@@ -1,17 +1,25 @@
 import React from "react"
 import styles from "./requirements.module.css"
+import { GrantType } from "../../../../types"
 
-const Requirements: React.FC = () => {
+interface IRequirementsProps {
+    grant: GrantType
+    id?: string
+}
+
+const Requirements: React.FC<IRequirementsProps> = ({ grant }) => {
+    const { ages } = grant
+
     return (
-        <div>
+        <div id="requirements">
             <h3 className={styles.title}>Требования для участия</h3>
             <div className={styles.description}>
                 <p>
                     В конкурсе могут принимать участие коллективы, состоящие из
                     физических лиц (проектные команды), являющихся гражданами
                     Российской Федерации. В состав проектной команды входят от 3
-                    до 5 физических лиц в возрасте от 18 до 35 лет и научный
-                    руководитель.
+                    до 5 физических лиц в возрасте от {ages.from} до {ages.to}{" "}
+                    лет и научный руководитель.
                 </p>
                 <p>
                     Выполнение проекта осуществляется при участии научного

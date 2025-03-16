@@ -1,11 +1,20 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styles from "./detailPage.module.css"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { BriefInfo, Description, Requirements } from "./components"
+import Grants from "../../store/grant"
+import { observer } from "mobx-react-lite"
 
-const DetailPage: React.FC = () => {
+const DetailPage: React.FC = observer(() => {
+    const { list, grant, setGrant } = Grants
     const navigate = useNavigate()
-    const goBack = () => navigate(-1)
+    const { id } = useParams<{ id: string }>()
+
+    useEffect(() => {
+        if (id !== "") setGrant(id)
+    }, [list, id, setGrant])
+
+    const goBack = () => navigate("/")
 
     return (
         <div className={styles.wrap}>
@@ -17,31 +26,35 @@ const DetailPage: React.FC = () => {
             </div>
             <div className={styles.content}>
                 <div className={styles.info}>
-                    <BriefInfo />
-                    <Description />
-                    <Requirements />
+                    {grant !== undefined && (
+                        <>
+                            <BriefInfo grant={grant} />
+                            <Description grant={grant} />
+                            <Requirements grant={grant} />
+                        </>
+                    )}
                 </div>
                 <div className={styles.sections}>
                     <h3 className={styles.titleSections}>Разделы</h3>
                     <ol className={styles.list}>
-                        <Link to={""}>
+                        <a href={"#briefInfo"}>
                             <li className={styles.item}>Краткая информация</li>
-                        </Link>
-                        <Link to={""}>
+                        </a>
+                        <a href={"#description"}>
                             <li className={styles.item}>
                                 Основные сведения о гранте
                             </li>
-                        </Link>
-                        <Link to={""}>
+                        </a>
+                        <a href={"#requirements"}>
                             <li className={styles.item}>
                                 Требования для участия
                             </li>
-                        </Link>
+                        </a>
                     </ol>
                 </div>
             </div>
         </div>
     )
-}
+})
 
 export default DetailPage

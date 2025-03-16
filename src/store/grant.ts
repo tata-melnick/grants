@@ -1,10 +1,10 @@
 import { action, makeAutoObservable, observable } from "mobx"
-import { ListGrant } from "../types"
+import { GrantType, ListGrant } from "../types"
 import GRANTS from "../mock/grants.json"
 
 class Grants {
     @observable list: ListGrant = [...GRANTS]
-    @observable grant: object = {}
+    @observable grant: GrantType | undefined = undefined
 
     constructor() {
         makeAutoObservable(this)
@@ -12,7 +12,9 @@ class Grants {
 
     @action setGrants = (arr: ListGrant) => (this.list = [...arr])
 
-    @action setGrant = () => this.list.map((el) => this.grant === el)
+    @action setGrant = (id: string | undefined) => {
+        this.grant = this.list.find((item) => item.id === id)
+    }
 }
 
 export default new Grants()
