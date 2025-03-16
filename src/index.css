@@ -56,6 +56,10 @@ button {
     cursor: pointer;
 }
 
+ul {
+    list-style-type: disc;
+}
+
 /*@media (orientation: portrait), (max-width: 770px) {*/
 /*}*/
 /*@media (orientation: landscape), (max-width: 1000px) {*/
