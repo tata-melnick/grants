@@ -53,10 +53,6 @@
     pointer-events: none;
 }
 
-.delimiter:hover {
-    background: #ffffff;
-}
-
 .chevronButtonDisabled {
     color: #ccc;
     pointer-events: none;

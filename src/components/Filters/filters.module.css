@@ -27,8 +27,8 @@
     position: absolute;
     width: 0;
     height: 0;
-    top: 5px;
-    left: -65px;
+    top: 7px;
+    left: -70px;
     border-bottom: 75px solid #ffffff;
     border-left: 80px solid transparent;
 }
@@ -47,8 +47,11 @@
 }
 
 .btn:hover {
-    background-color: #0d92ffd9;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #2d4ef8;
+    box-shadow:
+        0 0 8px #289fff,
+        0 0 0 #a2ccef00;
 }
 
 .sections {
