@@ -1,15 +1,11 @@
 .container {
     display: flex;
     align-items: center;
+    flex-direction: row;
     margin: auto auto 0;
     color: #0a0e35;
     user-select: none;
-}
-
-.wrap {
     padding: 0 30px;
-    display: flex;
-    flex-direction: row;
     gap: 10px;
 }
 
@@ -58,11 +54,15 @@
 }
 
 .delimiter:hover {
-    background: white;
+    background: #ffffff;
 }
 
 .chevronButtonDisabled {
     color: #ccc;
     pointer-events: none;
     border-color: #ccc;
+}
+
+.paginationItemDots:hover {
+    font-weight: 400;
 }

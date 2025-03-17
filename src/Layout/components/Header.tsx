@@ -6,8 +6,7 @@ import { useLocation } from "react-router-dom"
 
 const Header: React.FC = observer(() => {
     const { grant } = Grants
-    const location = useLocation()
-    const pathname = location.pathname
+    const { pathname } = useLocation()
 
     return (
         <div className={styles.header}>
