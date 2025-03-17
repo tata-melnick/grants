@@ -14,7 +14,9 @@ const DetailPage: React.FC = observer(() => {
         if (id !== "") setGrant(id)
     }, [list, id, setGrant])
 
-    const goBack = () => navigate("/")
+    const goBack = () => {
+        navigate("/")
+    }
 
     return (
         <div className={styles.wrap}>

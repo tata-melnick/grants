@@ -11,7 +11,9 @@ const Grant: React.FC<IGrantProps> = ({ detail }) => {
     const { id, name, description, provides, sum, status } = detail
     const navigate = useNavigate()
 
-    const goToGrant = () => navigate(`detail/${id}`)
+    const goToGrant = () => {
+        navigate(`detail/${id}`)
+    }
 
     return (
         <div className={styles.wrap}>
