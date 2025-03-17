@@ -21,7 +21,7 @@ const Paginator: React.FC<IPaginatorProps> = ({ page, count, onChange }) => {
             setRenderPages(array)
         } else {
             if (page < 3)
-                setRenderPages([...array.slice(0, 5), null, count - 1])
+                setRenderPages([...array.slice(0, 6), null, count - 1])
             if (page === 3)
                 setRenderPages([...array.slice(0, page + 3), null, count - 1])
             if (page > 3 && page < count - 4)
