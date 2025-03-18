@@ -1,0 +1,55 @@
+.container {
+    width: 335px;
+    background: #fff;
+    border-radius: 30px;
+}
+
+.calendarContainer {
+    width: 100%;
+}
+
+.calendar {
+    border-radius: 30px;
+    padding: 10px 0;
+    box-shadow: 0 0 20px #00000030;
+}
+
+.rangeContainer {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.range {
+    padding: 5px 10px;
+    flex: 1;
+}
+
+.range:first-child {
+    border-right: 1px solid #99a7b2;
+}
+
+.rangeTitle {
+    font-size: 14px;
+    color: #99a7b2;
+    text-align: end;
+}
+
+.rangeDate {
+    color: #99a7b2;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active {
+    color: #2d4ef8;
+}
+
+.date {
+    display: inline-block;
+    width: 105px;
+    text-align: end;
+    margin-left: auto;
+}

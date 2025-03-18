@@ -2,6 +2,7 @@ import React from "react"
 import styles from "./filters.module.css"
 import Checkbox from "../Checkbox"
 import Radio from "../Radio"
+import { Calendar } from "../Calendar"
 
 const Filters: React.FC = () => {
     return (
@@ -62,6 +63,7 @@ const Filters: React.FC = () => {
 
                 <div className={styles.section}>
                     <h3 className={styles.titleSection}>Название раздела</h3>
+                    <Calendar type="range" />
                 </div>
             </div>
         </div>
