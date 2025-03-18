@@ -3,12 +3,13 @@ import { Calendar as LibCalendar } from "react-calendar"
 import { Range, Value } from "react-calendar/src/shared/types"
 import cn from "classnames-ts"
 import styles from "./calendar.module.css"
-import "../../index.css"
+import "./reset-styles.css"
+import { CalendarIcon } from "../../icons"
 
 interface ICalendarProps {
     type?: "range" | "standard"
     onChange?(value: Date | null): void
-    onRangeChange(value: Range<Date | null>): (void | undefined) | undefined
+    onRangeChange?(value: Range<Date | null>): void
 }
 
 const formatDate = (date: Date | null) => {
@@ -54,7 +55,7 @@ export const Calendar = ({
                                 start && styles.active
                             )}
                         >
-                            <img src="/public/calendar.svg" alt="" />
+                            <CalendarIcon />
                             <span className={styles.date}>
                                 {formatDate(start)}
                             </span>
@@ -68,7 +69,7 @@ export const Calendar = ({
                                 end && styles.active
                             )}
                         >
-                            <img src="/public/calendar.svg" alt="" />
+                            <CalendarIcon />
                             <span className={styles.date}>
                                 {formatDate(end)}
                             </span>
