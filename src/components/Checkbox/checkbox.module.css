@@ -42,7 +42,7 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background: no-repeat url("/public/check-mark.svg");
+    background: no-repeat url("/src/icons/Checkbox.tsx");
     box-sizing: border-box;
     z-index: 3;
 }

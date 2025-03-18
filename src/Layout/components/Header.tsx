@@ -12,7 +12,7 @@ const Header: React.FC = observer(() => {
         <div className={styles.header}>
             {pathname !== "/" ? (
                 <>
-                    <h1 className={styles.titleDetail}>{grant?.name}</h1>
+                    <h1>{grant?.name}</h1>
                     <div className={styles.info}>
                         <div className={styles.provides}>
                             <div>Организатор конкурса:</div>

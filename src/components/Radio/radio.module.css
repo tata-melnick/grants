@@ -42,7 +42,7 @@
     width: 25px;
     height: 25px;
     border-radius: 25%;
-    background: no-repeat url("/public/radio.svg");
+    background: no-repeat url("/src/icons/Radio.tsx");
     box-sizing: border-box;
     z-index: -3;
 }
