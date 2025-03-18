@@ -36,10 +36,10 @@ export const Calendar = ({
         if (Array.isArray(value)) {
             setStart(value[0])
             setEnd(value[1])
-            onRangeChange && onRangeChange(value)
+            if (onRangeChange) onRangeChange(value)
         } else {
             setStart(value)
-            onChange && onChange(value)
+            if (onChange) onChange(value)
         }
     }
 
