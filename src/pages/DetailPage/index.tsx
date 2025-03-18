@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import { BriefInfo, Description, Requirements } from "./components"
 import Grants from "../../store/grant"
 import { observer } from "mobx-react-lite"
+import { ArrowBackIcon } from "../../icons"
 
 const DetailPage: React.FC = observer(() => {
     const { list, grant, setGrant } = Grants
@@ -21,7 +22,7 @@ const DetailPage: React.FC = observer(() => {
     return (
         <div className={styles.wrap}>
             <div className={styles.btnWrap}>
-                <img src="/public/arrow-back.png" alt="" />
+                <ArrowBackIcon />
                 <button onClick={goBack} className={styles.btn}>
                     Назад
                 </button>

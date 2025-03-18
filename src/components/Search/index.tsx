@@ -1,12 +1,13 @@
 import React from "react"
 import styles from "./search.module.css"
+import { CloseIcon, SearchIcon } from "../../icons"
 
 const Search: React.FC = () => {
     return (
         <div className={styles.wrap}>
             <div className={styles.search}>
                 <div className={styles.img}>
-                    <img src="/public/search.svg" alt="" />
+                    <SearchIcon />
                 </div>
                 <label htmlFor="input" className={styles.searchLb}>
                     <input
@@ -16,7 +17,7 @@ const Search: React.FC = () => {
                     />
                 </label>
                 <button className={styles.btnClose}>
-                    <img src="/public/close.svg" alt="" />
+                    <CloseIcon />
                 </button>
             </div>
             <button className={styles.btn}>Искать</button>

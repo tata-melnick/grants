@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import cn from "classnames-ts"
 import styles from "./paginator.module.css"
 import rndStr from "../../helpers/randomStr"
+import { ArrowIcon } from "../../icons"
 
 export interface IPaginatorProps {
     page: number
@@ -65,7 +66,7 @@ const Paginator: React.FC<IPaginatorProps> = ({ page, count, onChange }) => {
                 ])}
                 onClick={prevPage}
             >
-                <img src="/public/arrow.svg" alt="" />
+                <ArrowIcon />
             </span>
             {renderPages &&
                 renderPages.map((el) => (
@@ -89,7 +90,7 @@ const Paginator: React.FC<IPaginatorProps> = ({ page, count, onChange }) => {
                 ])}
                 onClick={nextPage}
             >
-                <img src="/public/arrow.svg" alt="" />
+                <ArrowIcon />
             </span>
         </div>
     )
