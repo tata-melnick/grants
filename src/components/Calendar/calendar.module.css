@@ -82,10 +82,6 @@
 }
 
 @media (orientation: landscape) and (max-width: 1000px) {
-    .calendarContainer {
-        width: 100%;
-    }
-
     .rangeContainer {
         margin-bottom: 15px;
     }
@@ -111,8 +107,8 @@
 }
 
 @media (orientation: portrait) and (max-width: 770px) {
-    .calendarContainer {
-        width: 100%;
+    .rangeContainer {
+        margin-bottom: 25px;
     }
 
     .range {
@@ -138,17 +134,51 @@
     }
 }
 @media (orientation: landscape) and (max-width: 480px) {
-    html,
-    body {
-        width: 100%;
-        height: 100%;
+    .rangeContainer {
+        margin-bottom: 10px;
+    }
+
+    .range {
+        padding: 10px 15px;
+    }
+
+    .rangeTitle {
+        font-size: 16px;
+        text-align: start;
+    }
+
+    .rangeIcon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .rangeDate {
+        font-size: 16px;
+        gap: 10px;
     }
 }
 
 @media (orientation: portrait) and (max-width: 360px) {
-    html,
-    body {
-        width: 100%;
-        height: 100%;
+    .rangeContainer {
+        margin-bottom: 10px;
+    }
+
+    .range {
+        padding: 10px 15px;
+    }
+
+    .rangeTitle {
+        font-size: 14px;
+        text-align: start;
+    }
+
+    .rangeIcon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .rangeDate {
+        font-size: 14px;
+        gap: 10px;
     }
 }

@@ -9,10 +9,12 @@
     align-items: center;
 }
 
-.title {
+.btnText {
     font-size: 34px;
-    font-weight: 500;
+    font-weight: 600;
     padding-left: 20px;
+    background-color: #e9f2f9;
+    border: none;
 }
 
 .btnWrap {
@@ -80,7 +82,6 @@
     gap: 30px;
 }
 
-
 @media (max-width: 1480px) {
     html,
     body {
@@ -110,14 +111,9 @@
         width: 27%;
     }
 
-    .title {
+    .btnText {
         font-size: 16px;
         padding-left: 10px;
-    }
-
-    .btnWrap {
-        padding: 10px 15px 0;
-        border-radius: 20px 20px 0 0;
     }
 
     .btn:before {
@@ -135,7 +131,7 @@
     .sections {
         gap: 25px;
         padding: 30px 15px 20px;
-        border-radius: 20px 0 20px 20px
+        border-radius: 20px 0 20px 20px;
     }
 
     .section {
@@ -156,11 +152,11 @@
         width: 39%;
     }
 
-
-    .title {
+    .btnText {
         font-size: 16px;
         padding-left: 10px;
     }
+
     .btn {
         padding: 8px 15px;
         font-size: 12px;
@@ -169,7 +165,7 @@
     .sections {
         gap: 25px;
         padding: 30px 15px 20px;
-        border-radius: 20px 0 20px 20px
+        border-radius: 20px 0 20px 20px;
     }
 
     .section {
@@ -186,17 +182,107 @@
 }
 
 @media (orientation: landscape) and (max-width: 480px) {
-    html,
-    body {
+    .content {
         width: 100%;
-        height: 100%;
+    }
+
+    .wrap {
+        flex-direction: row-reverse;
+        margin-bottom: 20px;
+    }
+
+    .btnWrap {
+        padding: 0;
+        border-radius: 20px;
+    }
+
+    .btn {
+        background-color: #e9f2f9;
+        font-size: 16px;
+    }
+
+    .btn:before {
+        display: none;
+    }
+
+    .btnText {
+        font-size: 16px;
+        font-weight: 600;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 9px 30px;
+        border-radius: 30px;
+    }
+
+    .btnText:hover {
+        background-color: #ffffff;
+        color: #2d4ef8;
+        box-shadow:
+            0 0 8px #289fff,
+            0 0 0 #a2ccef00;
+    }
+
+    .sections {
+        padding: 25px;
+        border-radius: 30px;
+    }
+
+    .titleSection {
+        font-size: 16px;
     }
 }
 
 @media (orientation: portrait) and (max-width: 360px) {
-    html,
-    body {
+    .content {
         width: 100%;
-        height: 100%;
+    }
+
+    .wrap {
+        flex-direction: row-reverse;
+        margin-bottom: 20px;
+    }
+
+    .btnWrap {
+        padding: 0;
+        border-radius: 20px;
+    }
+
+    .btn {
+        background-color: #e9f2f9;
+        font-size: 16px;
+    }
+
+    .btn:before {
+        display: none;
+    }
+
+    .btnText {
+        font-size: 16px;
+        font-weight: 600;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 9px 30px;
+        border-radius: 30px;
+    }
+
+    .btnText:hover {
+        background-color: #ffffff;
+        color: #2d4ef8;
+        box-shadow:
+            0 0 8px #289fff,
+            0 0 0 #a2ccef00;
+    }
+
+    .sections {
+        padding: 25px 20px;
+        border-radius: 30px;
+    }
+
+    .titleSection {
+        font-size: 16px;
     }
 }
