@@ -8,7 +8,7 @@ const Filters: React.FC = () => {
     return (
         <div className={styles.content}>
             <div className={styles.wrap}>
-                <h2 className={styles.title}>Фильтр</h2>
+                <button className={styles.btnText}>Фильтр</button>
                 <div className={styles.btnWrap}>
                     <button className={styles.btn}>Сбросить</button>
                 </div>
