@@ -55,7 +55,14 @@ export const Calendar = ({
                                 start && styles.active
                             )}
                         >
-                            <CalendarIcon />
+                            <span
+                                className={cn(
+                                    styles.rangeIcon,
+                                    start && styles.rangeIconActive
+                                )}
+                            >
+                                <CalendarIcon />
+                            </span>
                             <span className={styles.date}>
                                 {formatDate(start)}
                             </span>
@@ -66,10 +73,18 @@ export const Calendar = ({
                         <div
                             className={cn(
                                 styles.rangeDate,
-                                end && styles.active
+                                end && styles.active,
+                                end === null && styles.rangeDateInactive
                             )}
                         >
-                            <CalendarIcon />
+                            <span
+                                className={cn(
+                                    styles.rangeIcon,
+                                    end && styles.rangeIconActive
+                                )}
+                            >
+                                <CalendarIcon />
+                            </span>
                             <span className={styles.date}>
                                 {formatDate(end)}
                             </span>

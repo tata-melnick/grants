@@ -1,39 +1,62 @@
 .container {
-    width: 335px;
+    width: 100%;
     background: #fff;
     border-radius: 30px;
 }
 
 .calendarContainer {
     width: 100%;
-
 }
 
 .calendar {
     border-radius: 30px;
     padding: 10px 0;
-    box-shadow: 0 0 20px #00000030;
+    box-shadow: 0 0 10px #00000020;
 }
 
 .rangeContainer {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     margin-bottom: 25px;
 }
 
 .range {
-    padding: 5px 10px;
+    padding: 5px 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     flex: 1;
 }
 
 .range:first-child {
-    border-right: 1px solid #99a7b2;
+    border-right: 1px solid #e0e4e7;
+}
+
+.range > svg {
+    color: #e0e4e7;
 }
 
 .rangeTitle {
     font-size: 14px;
     color: #99a7b2;
+    margin-bottom: 10px;
     text-align: end;
+}
+
+.rangeIcon {
+    color: #e0e4e7;
+    width: 30px;
+    height: 30px;
+}
+
+.rangeIcon > svg {
+    width: 100%;
+    height: 100%;
+}
+
+.rangeIconActive {
+    color: #2d4ef8;
 }
 
 .rangeDate {
@@ -41,7 +64,12 @@
     font-size: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.rangeDateInactive {
+    color: #99a7b2;
 }
 
 .active {
@@ -50,7 +78,77 @@
 
 .date {
     display: inline-block;
-    width: 105px;
-    text-align: end;
-    margin-left: auto;
+    text-align: center;
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+    .calendarContainer {
+        width: 100%;
+    }
+
+    .rangeContainer {
+        margin-bottom: 15px;
+    }
+
+    .range {
+        padding: 5px 3px 5px 7px;
+    }
+
+    .rangeTitle {
+        font-size: 12px;
+        text-align: start;
+    }
+
+    .rangeIcon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .rangeDate {
+        font-size: 12px;
+        gap: 10px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 770px) {
+    .calendarContainer {
+        width: 100%;
+    }
+
+    .range {
+        padding: 5px 15px 5px 3px;
+    }
+
+    .range:first-child {
+        border-right: 1px solid #99a7b2;
+    }
+
+    .rangeTitle {
+        font-size: 10px;
+    }
+
+    .rangeIcon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .rangeDate {
+        font-size: 12px;
+        gap: 10px;
+    }
+}
+@media (orientation: landscape) and (max-width: 480px) {
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 360px) {
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
 }
