@@ -2,3 +2,15 @@
     width: 76%;
     height: 100%;
 }
+
+@media (orientation: landscape) and (max-width: 1000px) {
+    .content {
+        width: 76%;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 770px) {
+    .content {
+        width: 61%;
+    }
+}

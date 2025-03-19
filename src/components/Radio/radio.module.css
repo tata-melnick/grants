@@ -2,15 +2,17 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
 }
 
 .labelText {
     margin-left: 50px;
     color: #6e7880;
+    font-size: 21px;
+    height: 30px;
 }
 
 .radio {
-    font-size: 21px;
     display: inline-block;
     color: #6e7880;
     height: 30px;
@@ -49,4 +51,84 @@
 
 .radioOn:after:checked {
     z-index: 3;
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+    .labelText {
+        font-size: 12px;
+        margin-left: 30px;
+        height: 20px;
+    }
+
+    .radio:before {
+        top: 4px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+    }
+
+    .radio:after {
+        top: 7px;
+        left: 3px;
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 770px) {
+    .labelText {
+        font-size: 10px;
+        margin-left: 30px;
+    }
+
+    .radio:before {
+        width: 20px;
+        height: 20px;
+        top: 0;
+        left: 0;
+    }
+
+    .radio:after {
+        top: 7px;
+        left: 7px;
+        width: 15px;
+        height: 15px;
+    }
+}
+@media (orientation: landscape) and (max-width: 480px) {
+    .labelText {
+        font-size: 12px;
+        height: 20px;
+    }
+
+    .radio:before {
+        width: 20px;
+        height: 20px;
+    }
+
+    .radio:after {
+        top: 7px;
+        left: 7px;
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 360px) {
+    .labelText {
+        font-size: 12px;
+        height: 20px;
+    }
+
+    .radio:before {
+        width: 20px;
+        height: 20px;
+    }
+
+    .radio:after {
+        top: 7px;
+        left: 7px;
+        width: 15px;
+        height: 15px;
+    }
 }
