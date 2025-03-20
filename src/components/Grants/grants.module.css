@@ -14,3 +14,15 @@
         width: 61%;
     }
 }
+
+@media (orientation: landscape) and (max-width: 1000px) {
+    .content {
+        width: 100%;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 770px) {
+    .content {
+        width: 100%;
+    }
+}

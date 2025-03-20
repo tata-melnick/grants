@@ -9,6 +9,20 @@
 }
 
 
+@media (orientation: landscape) and (max-width: 1000px) {
+    .content {
+        padding: 0 0 50px;
+        gap: 20px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 770px) {
+    .content {
+        padding: 0 0 50px;
+        gap: 10px;
+    }
+}
+
 @media (orientation: landscape) and (max-width: 480px) {
     .content {
         flex-direction: column;
@@ -19,6 +33,6 @@
 @media (orientation: portrait) and (max-width: 360px) {
     .content {
         flex-direction: column;
-        padding:  0 0 50px;
+        padding: 0 0 50px;
     }
 }

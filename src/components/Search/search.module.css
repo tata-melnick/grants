@@ -9,6 +9,7 @@
 .search {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 63%;
     height: 70px;
     background-color: #ffffff;
@@ -19,6 +20,7 @@
 
 .searchLb {
     width: 100%;
+    height: 100%;
 }
 
 .searchLb > input {
@@ -26,6 +28,7 @@
     font-size: 21px;
     color: #99a7b2;
     width: 100%;
+    height: 100%;
     font-family: "Open Sans", sans-serif;
 }
 
@@ -39,8 +42,13 @@
     outline: none;
 }
 
-.img {
+.searchIcon {
     margin-right: 30px;
+}
+
+.searchIcon > svg {
+    width: 36px;
+    height: 36px;
 }
 
 .btnClose {
@@ -49,6 +57,8 @@
     position: absolute;
     top: 25px;
     right: 25px;
+    width: 20px;
+    height: 20px;
 }
 
 .btn {
@@ -71,4 +81,160 @@
     box-shadow:
         0 2px 35px #5eaeef,
         15px 5px 10px #a2ccef00;
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+    .wrap {
+        margin-bottom: 20px;
+        gap: 15px;
+    }
+
+    .search {
+        width: 70%;
+        height: 40px;
+        padding: 9px 15px;
+    }
+
+    .searchLb {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .searchLb > input {
+        font-size: 14px;
+    }
+
+    .searchIcon {
+        margin-right: 15px;
+    }
+
+    .searchIcon > svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .btnClose {
+        top: 13px;
+        right: 15px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        height: 34px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 770px) {
+    .wrap {
+        margin-bottom: 20px;
+        gap: 10px;
+    }
+
+    .search {
+        width: 65%;
+        height: 30px;
+        padding: 6px 15px;
+    }
+
+    .searchLb {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .searchLb > input {
+        font-size: 12px;
+    }
+
+    .searchIcon {
+        margin-right: 20px;
+    }
+
+    .searchIcon > svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .btnClose {
+        top: 8px;
+        right: 14px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .btn {
+        padding: 7px 15px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        height: 30px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 480px) {
+    .wrap {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search {
+        width: 100%;
+        height: 40px;
+        padding: 12px 15px;
+    }
+
+    .searchLb > input {
+        font-size: 16px;
+    }
+
+    .searchIcon {
+        margin-right: 15px;
+    }
+
+    .searchIcon > svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .btnClose {
+        top: 10px;
+        right: 15px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 360px) {
+    .wrap {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search {
+        width: 100%;
+        height: 40px;
+        padding: 12px 15px;
+    }
+
+    .searchIcon {
+        margin-right: 15px;
+    }
+
+    .searchIcon > svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .btnClose {
+        top: 10px;
+        right: 15px;
+        width: 16px;
+        height: 16px;
+    }
 }
