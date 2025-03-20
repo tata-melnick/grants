@@ -28,17 +28,17 @@ const Grant: React.FC<IGrantProps> = ({ detail }) => {
                 </button>
             </div>
             <div className={styles.info}>
-                <div>
+                <div className={styles.infoSection}>
                     <h3 className={styles.titleInfo}>Кто оказывает услуги</h3>
                     <p className={styles.textInfo}>{provides}</p>
                 </div>
-                <div>
+                <div className={styles.infoSection}>
                     <h3 className={styles.titleInfo}>Статус конкурса</h3>
                     <p className={styles.textInfo}>
                         с {status.from} по {status.to}
                     </p>
                 </div>
-                <div>
+                <div className={styles.infoSection}>
                     <h3 className={styles.titleInfo}>Размер гранта</h3>
                     {sum > 1 ? (
                         <p className={styles.textInfo}>до {sum} млн руб.</p>
