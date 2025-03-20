@@ -6,7 +6,7 @@ const Search: React.FC = () => {
     return (
         <div className={styles.wrap}>
             <div className={styles.search}>
-                <div className={styles.img}>
+                <div className={styles.searchIcon}>
                     <SearchIcon />
                 </div>
                 <label htmlFor="input" className={styles.searchLb}>
