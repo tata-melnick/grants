@@ -83,7 +83,7 @@
 
 @media (orientation: landscape) and (max-width: 1000px) {
     .rangeContainer {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     .range {
@@ -108,11 +108,11 @@
 
 @media (orientation: portrait) and (max-width: 770px) {
     .rangeContainer {
-        margin-bottom: 25px;
+        margin-bottom: 10px;
     }
 
     .range {
-        padding: 5px 15px 5px 3px;
+        padding: 5px 10px 5px 3px;
     }
 
     .range:first-child {
@@ -121,6 +121,7 @@
 
     .rangeTitle {
         font-size: 10px;
+        text-align: start;
     }
 
     .rangeIcon {
@@ -129,7 +130,7 @@
     }
 
     .rangeDate {
-        font-size: 12px;
+        font-size: 10px;
         gap: 10px;
     }
 }
