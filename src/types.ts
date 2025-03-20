@@ -29,4 +29,12 @@ export type GrantType = {
     criterion: string
 }
 
+export enum ScreenType {
+    Desktop = "Desktop",
+    TabletPortrait = "TabletPortrait",
+    TabletLandscape = "TabletLandscape",
+    MobilePortrait = "MobilePortrait",
+    MobileLandscape = "MobileLandscape",
+}
+
 export type ListGrant = Array<GrantType>

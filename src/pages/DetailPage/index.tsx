@@ -3,14 +3,15 @@ import styles from "./detailPage.module.css"
 import { useNavigate, useParams } from "react-router-dom"
 import { BriefInfo, Description, Requirements } from "./components"
 import Grants from "../../store/grant"
+import UiState from "../../store/uiState"
 import { observer } from "mobx-react-lite"
 import { ArrowBackIcon } from "../../icons"
 
 const DetailPage: React.FC = observer(() => {
     const { list, grant, setGrant } = Grants
+    const { isDesktop } = UiState
     const navigate = useNavigate()
     const { id } = useParams<{ id: string }>()
-
     useEffect(() => {
         if (id !== "") setGrant(id)
     }, [list, id, setGrant])
@@ -21,12 +22,14 @@ const DetailPage: React.FC = observer(() => {
 
     return (
         <div className={styles.wrap}>
-            <div className={styles.btnWrap}>
-                <ArrowBackIcon />
-                <button onClick={goBack} className={styles.btn}>
-                    Назад
-                </button>
-            </div>
+            {isDesktop && (
+                <div className={styles.btnWrap}>
+                    <ArrowBackIcon />
+                    <button onClick={goBack} className={styles.btn}>
+                        Назад
+                    </button>
+                </div>
+            )}
             <div className={styles.content}>
                 <div className={styles.info}>
                     {grant !== undefined && (
