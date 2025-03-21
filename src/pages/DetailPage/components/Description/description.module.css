@@ -1,12 +1,13 @@
 .title {
     font-size: 38px;
     font-weight: 500;
-    margin: 0 0 15px 50px;
+    margin-bottom: 15px;
+    padding-left: 50px;
 }
 
 .description {
     background-color: #ffffff;
-    border-radius: 25px;
+    border-radius: 35px;
     padding: 30px 50px 65px;
     font-size: 24px;
     font-weight: lighter;
@@ -46,4 +47,119 @@
 
 .listTwo > li::marker {
     font-size: 10px;
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+    .title {
+        font-size: 16px;
+        padding-left: 20px;
+    }
+
+    .description {
+        padding: 20px;
+        border-radius: 16px;
+        font-size: 14px;
+        gap: 20px;
+    }
+
+    .lots {
+        padding-left: 23px;
+    }
+
+    .subLots {
+        padding-left: 20px;
+    }
+
+    .subLots > li::marker {
+        font-size: 8px;
+    }
+
+    .list {
+        padding-left: 15px;
+    }
+
+    .list > li::marker {
+        font-size: 8px;
+    }
+
+    .listTwo {
+        padding-left: 30px;
+        margin-bottom: 15px;
+    }
+
+    .listTwo > li::marker {
+        font-size: 8px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 770px) {
+    .title {
+        font-size: 16px;
+        padding-left: 15px;
+    }
+
+    .description {
+        padding: 15px 15px 25px;
+        border-radius: 16px;
+        font-size: 14px;
+        gap: 20px;
+    }
+
+    .lots {
+        padding-left: 23px;
+    }
+
+    .subLots {
+        padding-left: 20px;
+    }
+
+    .subLots > li::marker {
+        font-size: 8px;
+    }
+
+    .list {
+        padding-left: 15px;
+    }
+
+    .list > li::marker {
+        font-size: 8px;
+    }
+
+    .listTwo {
+        padding-left: 30px;
+        margin-bottom: 15px;
+    }
+
+    .listTwo > li::marker {
+        font-size: 8px;
+    }
+}
+@media (orientation: landscape) and (max-width: 480px) {
+    .title {
+        padding-left: 15px;
+    }
+
+    .description {
+        padding: 20px 15px;
+    }
+
+    .listTwo {
+        padding-left: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 360px) {
+    .title {
+        padding-left: 15px;
+    }
+
+    .description {
+        padding: 20px 15px 25px;
+    }
+
+    .listTwo {
+        padding-left: 15px;
+        margin-bottom: 10px;
+    }
 }
