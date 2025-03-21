@@ -10,7 +10,7 @@ export interface IPaginatorProps {
     count: number
 }
 
-const Paginator: React.FC<IPaginatorProps> = ({ page, count, onChange }) => {
+const Paginator: React.FC<IPaginatorProps> = ({ page, onChange, count }) => {
     const [pages, setPages] = useState<Array<number>>([])
     const [renderPages, setRenderPages] = useState<Array<number | null>>([])
 

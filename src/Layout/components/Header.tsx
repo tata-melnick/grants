@@ -9,7 +9,7 @@ import UiState from "../../store/uiState"
 
 const Header: React.FC = observer(() => {
     const { grant } = Grants
-    const { isTablet } = UiState
+    const { isDesktop } = UiState
     const { pathname } = useLocation()
     const navigate = useNavigate()
 
@@ -27,7 +27,7 @@ const Header: React.FC = observer(() => {
         >
             {pathname !== "/" ? (
                 <>
-                    {isTablet && (
+                    {!isDesktop && (
                         <div className={styles.btnWrap}>
                             <ArrowBackIcon />
                             <button onClick={goBack} className={styles.btnBack}>
