@@ -9,7 +9,7 @@ import UiState from "../../store/uiState"
 
 const Header: React.FC = observer(() => {
     const { grant } = Grants
-    const { isDesktop } = UiState
+    const { isDesktop, isMobilePortrait, isMobileLandscape } = UiState
     const { pathname } = useLocation()
     const navigate = useNavigate()
 
@@ -37,18 +37,23 @@ const Header: React.FC = observer(() => {
                     )}
                     <div className={styles.wrap}>
                         <h1 className={styles.titleDetail}>{grant?.name}</h1>
-                        <div className={styles.info}>
+                        <div className={styles.providesWrap}>
                             <div className={styles.provides}>
                                 <div>Организатор конкурса:</div>
                                 <div className={styles.text}>
                                     {grant?.provides}
                                 </div>
                             </div>
-                            <button className={styles.btn}>
-                                Перейти на сайт
-                            </button>
+                            {(isDesktop || isMobilePortrait) && (
+                                <button className={styles.btn}>
+                                    Перейти на сайт
+                                </button>
+                            )}
                         </div>
                     </div>
+                    {isMobileLandscape && (
+                        <button className={styles.btn}>Перейти на сайт</button>
+                    )}
                 </>
             ) : (
                 <>
