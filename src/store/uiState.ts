@@ -20,6 +20,21 @@ class UiState {
         )
     }
 
+    @computed get isMobile() {
+        return (
+            this.screenType === ScreenType.MobilePortrait ||
+            this.screenType === ScreenType.MobileLandscape
+        )
+    }
+
+    @computed get isMobilePortrait() {
+        return this.screenType === ScreenType.MobilePortrait
+    }
+
+    @computed get isMobileLandscape() {
+        return this.screenType === ScreenType.MobileLandscape
+    }
+
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     @action checkWindowSize = (event) => {

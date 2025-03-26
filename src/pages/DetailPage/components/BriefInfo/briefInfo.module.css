@@ -93,17 +93,17 @@
         margin-bottom: 10px;
     }
 
-    .condition1 {
+    .conditionOne {
         grid-column: 1;
         grid-row: 1;
     }
 
-    .condition2 {
+    .conditionTwo {
         grid-column: 1;
         grid-row: 3;
     }
 
-    .condition3 {
+    .conditionThree {
         grid-column: 1;
         grid-row: 5;
     }
@@ -113,19 +113,29 @@
         margin-bottom: 20px;
     }
 
-    .text1 {
+    .textOne {
         grid-column: 1;
         grid-row: 2;
     }
 
-    .text2 {
+    .textTwo {
         grid-column: 1;
         grid-row: 4;
     }
 
-    .text3 {
+    .textThree {
         grid-column: 1;
         grid-row: 6;
+        margin-bottom: 0;
+    }
+
+
+    .btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border: none;
+        background-color: transparent;
     }
 }
 
@@ -145,17 +155,17 @@
         height: 10px;
     }
 
-    .condition1 {
+    .conditionOne {
         grid-column: 1;
         grid-row: 1;
     }
 
-    .condition2 {
+    .conditionTwo {
         grid-column: 1;
         grid-row: 3;
     }
 
-    .condition3 {
+    .conditionThree {
         grid-column: 1;
         grid-row: 5;
     }
@@ -165,18 +175,28 @@
         height: 20px;
     }
 
-    .text1 {
+    .textOne {
         grid-column: 1;
         grid-row: 2;
     }
 
-    .text2 {
+    .textTwo {
         grid-column: 1;
         grid-row: 4;
     }
 
-    .text3 {
+    .textThree {
         grid-column: 1;
         grid-row: 6;
+        margin-bottom: 0;
+    }
+
+
+    .btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border: none;
+        background-color: transparent;
     }
 }

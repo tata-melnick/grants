@@ -14,13 +14,10 @@
     align-items: center;
     gap: 15px;
     margin-top: 35px;
-}
-
-.btnWrap {
     color: #2c4ec5;
 }
 
-.btn {
+.btnBack {
     border: none;
     color: #2c4ec5;
     font-size: 24px;
@@ -40,35 +37,6 @@
     gap: 35px;
 }
 
-.sections {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.titleSections {
-    margin-left: 30px;
-    font-size: 38px;
-    font-weight: 500;
-}
-
-.list {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    border: solid 1px #6e7880;
-    border-radius: 35px;
-    padding: 30px 30px 30px 50px;
-}
-
-.item {
-    font-size: 24px;
-    font-weight: 500;
-    font-family: "Open Sans", sans-serif;
-    color: #000000;
-}
-
 @media (orientation: landscape) and (max-width: 1000px) {
     .wrap {
         padding: 0 40px 55px 50px;
@@ -85,26 +53,6 @@
         display: flex;
         flex-direction: column;
         gap: 35px;
-    }
-
-    .sections {
-        width: 30%;
-    }
-
-    .titleSections {
-        margin-left: 15px;
-        font-size: 16px;
-    }
-
-    .list {
-        gap: 20px;
-        padding: 20px 20px 30px 30px;
-        border-radius: 20px;
-    }
-
-    .item {
-        font-size: 14px;
-        font-weight: 500;
     }
 }
 
@@ -123,31 +71,10 @@
         width: 74%;
         gap: 25px;
     }
-
-    .sections {
-        width: 26%;
-    }
-
-    .titleSections {
-        margin-left: 15px;
-        font-size: 16px;
-    }
-
-    .list {
-        gap: 20px;
-        padding: 15px 10px 30px 30px;
-        border-radius: 20px;
-    }
-
-    .item {
-        font-size: 12px;
-        font-weight: 500;
-    }
 }
 @media (orientation: landscape) and (max-width: 480px) {
     .wrap {
         padding: 0 10px 75px 10px;
-
     }
 
     .content {
@@ -161,26 +88,12 @@
         display: flex;
         flex-direction: column;
         gap: 35px;
-    }
-
-    .sections {
-        width: 100%;
-    }
-
-    .list {
-        padding: 25px 25px 45px 35px;
-    }
-
-    .item {
-        font-size: 16px;
-        font-weight: 500;
     }
 }
 
 @media (orientation: portrait) and (max-width: 360px) {
     .wrap {
         padding: 0 0 50px;
-
     }
 
     .content {
@@ -194,18 +107,5 @@
         display: flex;
         flex-direction: column;
         gap: 35px;
-    }
-
-    .sections {
-        width: 100%;
-    }
-
-    .list {
-        padding: 25px 25px 45px 35px;
-    }
-
-    .item {
-        font-size: 16px;
-        font-weight: 500;
     }
 }

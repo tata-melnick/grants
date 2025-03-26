@@ -16,6 +16,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
     padding: 200px 165px 35px;
     margin-bottom: 60px;
 }
@@ -53,7 +54,7 @@
     width: 70%;
 }
 
-.info {
+.providesWrap {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -67,6 +68,9 @@
 }
 
 .provides {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     color: #ffffff;
     font-size: 24px;
 }
@@ -74,13 +78,13 @@
 .text {
     font-size: 30px;
     font-weight: 400;
-    margin-top: 30px;
 }
 
 .btn {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     padding: 30px 0;
     border-radius: 20px;
     border: none;
@@ -92,7 +96,9 @@
 }
 
 .btn:hover {
-    color: #6380e5;
+    box-shadow:
+            0 2px 35px #5eaeef,
+            15px 5px 10px #a2ccef00;
 }
 
 @media (max-width: 1865px) {
@@ -206,7 +212,6 @@
 
     .wrap {
         gap: 20px;
-        height: 145px;
     }
 
     .btnWrap {
@@ -233,27 +238,23 @@
         -webkit-box-orient: vertical;
     }
 
-    .info {
+    .providesWrap {
+        justify-content: flex-start;
         padding: 15px;
         width: 255px;
-        height: 100%;
+        height: 145px;
         border-radius: 16px;
     }
 
     .provides {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
         font-size: 16px;
     }
 
     .text {
         font-size: 16px;
-        margin-top: 25px;
-    }
-
-    .btn {
-        padding: 15px 30px;
-        border-radius: 10px;
-        font-size: 14px;
-        font-weight: 300;
     }
 }
 
@@ -286,13 +287,12 @@
         flex-direction: column;
         justify-content: flex-start;
         gap: 0;
-        padding: 40px 30px 15px 30px;
+        padding: 50px 30px 25px 30px;
         margin-bottom: 20px;
     }
 
     .wrap {
         gap: 20px;
-        height: 140px;
     }
 
     .btnWrap {
@@ -319,21 +319,24 @@
         -webkit-box-orient: vertical;
     }
 
-    .info {
+    .providesWrap {
+        justify-content: flex-start;
         padding: 10px 15px;
         width: 185px;
-        height: 100%;
+        height: 125px;
         border-radius: 16px;
     }
 
     .provides {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
         font-size: 14px;
     }
 
     .text {
         font-size: 14px;
         font-weight: 300;
-        margin-top: 15px;
     }
 
     .btn {
@@ -368,15 +371,14 @@
     }
 
     .headerDetail {
-        height: 330px;
+        height: 340px;
         width: 100%;
-        padding: 30px 20px 15px;
+        padding: 20px;
         margin-bottom: 25px;
     }
 
     .wrap {
-        gap: 20px;
-        height: 250px;
+        gap: 10px;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -386,14 +388,14 @@
         display: flex;
         flex-direction: row;
         gap: 15px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     .btnBack {
         border: none;
         background-color: transparent;
         color: #ffffff;
-        font-size: 19px;
+        font-size: 18px;
         font-weight: lighter;
     }
 
@@ -407,20 +409,21 @@
         -webkit-box-orient: vertical;
     }
 
-    .info {
-        padding: 15px;
+    .providesWrap {
+        padding: 10px;
         width: 100%;
-        height: 115px;
+        height: 105px;
+        margin-bottom: 10px;
     }
 
     .provides {
+        gap: 20px;
         font-size: 16px;
     }
 
     .text {
         font-size: 16px;
         font-weight: 500;
-        margin-top: 25px;
     }
 
     .btn {
@@ -453,7 +456,7 @@
     }
 
     .headerDetail {
-        height: 330px;
+        height: 440px;
         width: 100%;
         gap: 15px;
         padding: 35px 20px 25px;
@@ -464,7 +467,6 @@
         display: flex;
         flex-direction: column;
         gap: 15px;
-        height: 445px;
     }
 
     .btnWrap {
@@ -485,20 +487,23 @@
         width: 100%;
     }
 
-    .info {
+    .providesWrap {
+        justify-content: space-between;
+        align-items: center;
         padding: 15px;
         width: 100%;
-        height: 115px;
+        height: 200px;
     }
 
     .provides {
+        gap: 20px;
         font-size: 16px;
+        margin-bottom: 10px;
     }
 
     .text {
         font-size: 16px;
         font-weight: 500;
-        margin-top: 25px;
     }
 
     .btn {

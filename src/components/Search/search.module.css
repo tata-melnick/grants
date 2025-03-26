@@ -208,6 +208,10 @@
         width: 16px;
         height: 16px;
     }
+
+    .btn {
+        display: none;
+    }
 }
 
 @media (orientation: portrait) and (max-width: 360px) {
@@ -236,5 +240,9 @@
         right: 15px;
         width: 16px;
         height: 16px;
+    }
+
+    .btn {
+        display: none;
     }
 }
