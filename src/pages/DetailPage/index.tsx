@@ -6,10 +6,13 @@ import Grants from "../../store/grant"
 import UiState from "../../store/uiState"
 import { observer } from "mobx-react-lite"
 import { ArrowBackIcon } from "../../icons"
+import { Menu, Modal } from "../../components"
+import ModalMenu from "../../store/modal"
 
 const DetailPage: React.FC = observer(() => {
     const { list, grant, setGrant } = Grants
-    const { isDesktop } = UiState
+    const { isDesktop, isMobile } = UiState
+    const { modal, close } = ModalMenu
     const navigate = useNavigate()
     const { id } = useParams<{ id: string }>()
     useEffect(() => {
@@ -25,7 +28,7 @@ const DetailPage: React.FC = observer(() => {
             {isDesktop && (
                 <div className={styles.btnWrap}>
                     <ArrowBackIcon />
-                    <button onClick={goBack} className={styles.btn}>
+                    <button onClick={goBack} className={styles.btnBack}>
                         Назад
                     </button>
                 </div>
@@ -40,25 +43,9 @@ const DetailPage: React.FC = observer(() => {
                         </>
                     )}
                 </div>
-                <div className={styles.sections}>
-                    <h3 className={styles.titleSections}>Разделы</h3>
-                    <ol className={styles.list}>
-                        <a href={"#briefInfo"}>
-                            <li className={styles.item}>Краткая информация</li>
-                        </a>
-                        <a href={"#description"}>
-                            <li className={styles.item}>
-                                Основные сведения о гранте
-                            </li>
-                        </a>
-                        <a href={"#requirements"}>
-                            <li className={styles.item}>
-                                Требования для участия
-                            </li>
-                        </a>
-                    </ol>
-                </div>
+                {!isMobile && <Menu />}
             </div>
+            <Modal open={modal} onClose={close} />
         </div>
     )
 })
