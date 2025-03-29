@@ -7,7 +7,6 @@
     margin-bottom: 60px;
 }
 
-
 @media (orientation: landscape) and (max-width: 1000px) {
     .list {
         gap: 20px;
@@ -21,6 +20,7 @@
         margin-bottom: 25px;
     }
 }
+
 @media (orientation: landscape) and (max-width: 480px) {
     .list {
         gap: 20px;

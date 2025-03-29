@@ -45,7 +45,7 @@
 }
 
 @media (orientation: portrait) and (max-width: 770px) {
-     .sections {
+    .sections {
         gap: 25px;
         padding: 30px 15px 20px;
         border-radius: 20px 0 20px 20px;
@@ -65,7 +65,7 @@
 }
 
 @media (orientation: landscape) and (max-width: 480px) {
-     .sections {
+    .sections {
         padding: 25px;
         border-radius: 30px;
     }
@@ -76,7 +76,7 @@
 }
 
 @media (orientation: portrait) and (max-width: 360px) {
-       .sections {
+    .sections {
         padding: 25px 20px;
         border-radius: 30px;
     }
