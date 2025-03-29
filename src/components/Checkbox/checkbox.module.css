@@ -7,6 +7,7 @@
 .labelText {
     margin-left: 50px;
     color: #6e7880;
+    font-size: 21px;
 }
 
 .checkbox {
@@ -17,7 +18,6 @@
     flex-shrink: 0;
     user-select: none;
     position: relative;
-    z-index: 2;
     cursor: pointer;
 }
 
@@ -36,27 +36,27 @@
 .checkbox:after {
     content: "";
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 3px;
+    left: 4px;
     display: block;
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background: no-repeat url("/src/icons/Checkbox.tsx");
+    background: no-repeat url("/src/components/Checkbox/checkbox.svg");
+    background-size: 24px;
     box-sizing: border-box;
-    z-index: 3;
+    z-index: -3;
 }
 
-.checkboxOn:after:checked {
+.checkboxOn:after {
     z-index: 3;
 }
-
 
 @media (orientation: landscape) and (max-width: 1000px) {
     .labelText {
         font-size: 12px;
         margin-left: 30px;
-        height: 20px;
+        min-height: 20px;
     }
 
     .checkbox:before {
@@ -68,9 +68,8 @@
 
     .checkbox:after {
         top: 7px;
-        left: 3px;
-        width: 15px;
-        height: 15px;
+        left: 2px;
+        background-size: 16px;
     }
 }
 
@@ -88,17 +87,16 @@
     }
 
     .checkbox:after {
-        top: 5px;
-        left: 3px;
-        width: 15px;
-        height: 15px;
+        top: 7px;
+        left: 2px;
+        background-size: 16px;
     }
 }
 @media (orientation: landscape) and (max-width: 480px) {
     .labelText {
         font-size: 16px;
         margin-left: 40px;
-        height: 25px;
+        min-height: 25px;
     }
 
     .checkbox:before {
@@ -109,10 +107,9 @@
     }
 
     .checkbox:after {
-        top: 3px;
+        top: 4px;
         left: 3px;
-        width: 19px;
-        height: 19px;
+        background-size: 19px;
     }
 }
 
@@ -120,7 +117,7 @@
     .labelText {
         font-size: 14px;
         margin-left: 40px;
-        height: 25px;
+        min-height: 25px;
     }
 
     .checkbox:before {
@@ -131,9 +128,8 @@
     }
 
     .checkbox:after {
-        top: 3px;
+        top: 4px;
         left: 3px;
-        width: 19px;
-        height: 19px;
+        background-size: 19px;
     }
 }

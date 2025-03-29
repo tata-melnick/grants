@@ -2,15 +2,13 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
 }
 
 .labelText {
     margin-left: 50px;
     color: #6e7880;
     font-size: 21px;
-    height: 30px;
-    text-align: center;
+    min-height: 30px;
 }
 
 .radio {
@@ -45,12 +43,13 @@
     width: 25px;
     height: 25px;
     border-radius: 25%;
-    background: no-repeat url("/src/icons/Radio.tsx");
+    background: no-repeat url("/src/components/Radio/radio.svg");
+    background-size: 16px;
     box-sizing: border-box;
     z-index: -3;
 }
 
-.radioOn:after:checked {
+.radioOn:after {
     z-index: 3;
 }
 
@@ -58,7 +57,7 @@
     .labelText {
         font-size: 12px;
         margin-left: 30px;
-        height: 20px;
+        min-height: 20px;
     }
 
     .radio:before {
@@ -69,10 +68,9 @@
     }
 
     .radio:after {
-        top: 7px;
-        left: 3px;
-        width: 15px;
-        height: 15px;
+        top: 8px;
+        left: 5px;
+        background-size: 11px;
     }
 }
 
@@ -80,6 +78,7 @@
     .labelText {
         font-size: 10px;
         margin-left: 30px;
+        min-height: 25px;
     }
 
     .radio:before {
@@ -90,17 +89,16 @@
     }
 
     .radio:after {
-        top: 7px;
-        left: 7px;
-        width: 15px;
-        height: 15px;
+        top: 4px;
+        left: 5px;
+        background-size: 11px;
     }
 }
 @media (orientation: landscape) and (max-width: 480px) {
     .labelText {
         font-size: 16px;
         margin-left: 40px;
-        height: 25px;
+        min-height: 25px;
     }
 
     .radio:before {
@@ -111,10 +109,9 @@
     }
 
     .radio:after {
-        top: 3px;
-        left: 3px;
-        width: 19px;
-        height: 19px;
+        top: 6px;
+        left: 6px;
+        background-size: 13px;
     }
 }
 
@@ -122,7 +119,7 @@
     .labelText {
         font-size: 14px;
         margin-left: 40px;
-        height: 25px;
+        min-height: 25px;
     }
 
     .radio:before {
@@ -133,9 +130,8 @@
     }
 
     .radio:after {
-        top: 3px;
-        left: 3px;
-        width: 19px;
-        height: 19px;
+        top: 6px;
+        left: 6px;
+        background-size: 13px;
     }
 }
