@@ -19,7 +19,7 @@
         "module": "esnext",
         "moduleResolution": "node",
         "newLine": "CRLF",
-        "noImplicitAny": true,
+        "noImplicitAny": false,
         "noUnusedLocals": false,
         "noUnusedParameters": true,
         "outDir": "./dist",
