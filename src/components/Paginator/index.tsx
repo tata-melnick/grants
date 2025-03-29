@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import cn from "classnames-ts"
 import styles from "./paginator.module.css"
 import rndStr from "../../helpers/randomStr"
@@ -11,8 +11,8 @@ export interface IPaginatorProps {
 }
 
 const Paginator: React.FC<IPaginatorProps> = ({ page, onChange, count }) => {
-    const [pages, setPages] = useState<Array<number>>([])
     const [renderPages, setRenderPages] = useState<Array<number | null>>([])
+    const prevCount = useRef(count)
 
     const prevPage = () => onChange(page - 1)
     const nextPage = () => onChange(page + 1)
@@ -45,14 +45,13 @@ const Paginator: React.FC<IPaginatorProps> = ({ page, onChange, count }) => {
     }
 
     useEffect(() => {
-        const newPages = []
+        const newPages: number[] = []
         for (let i = 0; i < count; i++) newPages.push(i)
         handleSetRenderPages(newPages)
-        setPages(newPages)
-    }, [])
-
-    useEffect(() => {
-        if (pages.length) handleSetRenderPages(pages)
+        if (prevCount.current !== count) {
+            onChange(0)
+            prevCount.current = count
+        }
     }, [count, page])
 
     if (!count || count <= 1) return null
