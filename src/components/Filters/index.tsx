@@ -24,7 +24,7 @@ const Filters: React.FC = observer(() => {
                 <div key={title} className={styles.section}>
                     <h3 className={styles.titleSection}>{title}</h3>
                     <div className={styles.filter}>
-                        {[...items.values()].map((value) => (
+                        {[...items.values()].sort().map((value) => (
                             <React.Fragment key={value}>
                                 {type === "r" ? (
                                     <Radio
