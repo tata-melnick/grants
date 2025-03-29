@@ -11,7 +11,7 @@ export const MenuIcon = () => (
         <g filter="url(#filter0_d_21_2269)">
             <rect x="7" y="7" width="40" height="40" rx="10" fill="white" />
         </g>
-        <g clip-path="url(#clip0_21_2269)">
+        <g clipPath="url(#clip0_21_2269)">
             <path
                 d="M21.8718 20.8464H38.2821C38.5541 20.8464 38.815 20.7384 39.0073 20.546C39.1997 20.3537 39.3077 20.0928 39.3077 19.8208C39.3077 19.5488 39.1997 19.2879 39.0073 19.0956C38.815 18.9032 38.5541 18.7952 38.2821 18.7952H21.8718C21.5998 18.7952 21.3389 18.9032 21.1466 19.0956C20.9542 19.2879 20.8462 19.5488 20.8462 19.8208C20.8462 20.0928 20.9542 20.3537 21.1466 20.546C21.3389 20.7384 21.5998 20.8464 21.8718 20.8464Z"
                 fill="#2C4EC5"
@@ -45,9 +45,9 @@ export const MenuIcon = () => (
                 width="54"
                 height="54"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
             >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feColorMatrix
                     in="SourceAlpha"
                     type="matrix"

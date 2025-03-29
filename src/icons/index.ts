@@ -1,8 +1,6 @@
 export { GrantIcon } from "./Grant"
 export { SearchIcon } from "./Search"
 export { CloseIcon } from "./Close"
-export { CheckboxIcon } from "./Checkbox"
-export { RadioIcon } from "./Radio"
 export { ArrowBackIcon } from "./ArrowBack"
 export { ArrowIcon } from "./Arrow"
 export { CalendarIcon } from "./Calendar"
