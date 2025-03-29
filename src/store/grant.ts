@@ -1,29 +1,148 @@
-import { action, makeAutoObservable, observable } from "mobx"
-import { GrantType, ListGrant } from "../types"
+import {
+    action,
+    runInAction,
+    makeObservable,
+    observable,
+    autorun,
+    computed,
+} from "mobx"
+import { ActiveFilters, Filters, GrantType, ListGrant } from "../types"
 import GRANTS from "../mock/grants.json"
 
+const defaultFilters: Filters = {
+    stage: { title: "Стадия проекта", type: "c", items: new Set<string>() },
+    sum: { title: "Сумма гранта", type: "c", items: new Set<string>() },
+    legalForm: {
+        title: "Правовая форма грантополучателя",
+        type: "r",
+        items: new Set<string>(),
+    },
+    region: {
+        title: "Регион участия",
+        type: "r",
+        items: new Set<string>(),
+    },
+    lots: {
+        title: "Направления проекта",
+        type: "c",
+        items: new Set<string>(),
+    },
+    ages: {
+        title: "Возраст участников",
+        type: "r",
+        items: new Set<string>(),
+    },
+    criterion: {
+        title: "Отсекающий критерий",
+        type: "r",
+        items: new Set<string>(),
+    },
+}
+
+const defaultActiveFilters: ActiveFilters = {
+    stage: [],
+    sum: [],
+    legalForm: [],
+    region: [],
+    lots: [],
+    ages: [],
+    criterion: [],
+}
+
 class Grants {
-    @observable list: ListGrant = [...GRANTS]
-    @observable grant: GrantType | undefined = undefined
-    // @observable isGrant: boolean = false
+    @observable _list: ListGrant = [...GRANTS]
+    @observable grant: GrantType | null = null
+    @observable filters: Filters = defaultFilters
+    @observable activeFilters: ActiveFilters = defaultActiveFilters
+
+    @computed get list() {
+        let result = this._list
+        if (this.activeFilters.stage.length > 0) {
+            result = result.filter((el) =>
+                this.activeFilters.stage.includes(el.projectStage)
+            )
+        }
+        if (this.activeFilters.sum.length > 0) {
+            result = result.filter((el) =>
+                this.activeFilters.sum.includes(el.sum)
+            )
+        }
+        if (this.activeFilters.legalForm.length > 0) {
+            result = result.filter((el) =>
+                this.activeFilters.legalForm.includes(el.legalForm)
+            )
+        }
+        if (this.activeFilters.region.length > 0) {
+            result = result.filter((el) =>
+                this.activeFilters.region.includes(el.region)
+            )
+        }
+        if (this.activeFilters.lots.length > 0) {
+            result = result.filter((el) =>
+                el.lots.some((lot) =>
+                    this.activeFilters.lots.includes(lot.description)
+                )
+            )
+        }
+        if (this.activeFilters.criterion.length > 0) {
+            result = result.filter((el) =>
+                this.activeFilters.criterion.includes(el.criterion)
+            )
+        }
+        if (this.activeFilters.ages.length > 0) {
+            result = result.filter((el) =>
+                this.activeFilters.ages.includes(
+                    `${el.ages.from} - ${el.ages.to}`
+                )
+            )
+        }
+        return result
+    }
 
     constructor() {
-        makeAutoObservable(this)
-    }
+        makeObservable(this)
 
-    @action setGrants = (arr: ListGrant) => (this.list = [...arr])
+        autorun(() => {
+            if (this.list && this.list.length > 0) {
+                runInAction(() => {
+                    this.list.forEach((grant) => {
+                        if (grant.projectStage)
+                            this.filters.stage.items.add(grant.projectStage)
+                        if (grant.sum) this.filters.sum.items.add(grant.sum)
+
+                        if (grant.legalForm)
+                            this.filters.legalForm.items.add(grant.legalForm)
+                        if (grant.region)
+                            this.filters.region.items.add(grant.region)
+                        if (grant.criterion)
+                            this.filters.criterion.items.add(grant.criterion)
+                        if (grant.lots && grant.lots.length > 0) {
+                            grant.lots.forEach((el) => {
+                                this.filters.lots.items.add(el.description)
+                            })
+                        }
+                        if (grant.ages) {
+                            this.filters.ages.items.add(
+                                `${grant.ages.from} - ${grant.ages.to}`
+                            )
+                        }
+                    })
+                })
+            }
+        })
+    }
 
     @action setGrant = (id: string | undefined) => {
-        this.grant = this.list.find((item) => item.id === id)
+        this.grant = this.list.find((item) => item.id === id) || null
     }
 
-    // @action setIsGrant = () => (this.isGrant = !this.isGrant)
+    @action resetFilters = () => {
+        this.activeFilters = defaultActiveFilters
+    }
 
-    //     @action setFilter = (arr: ListGrant) => {
-    //        switch ()
-    //     }
+    @action changeFilter = (key: string, value: string[]) => {
+        this.activeFilters[key] = value
+    }
 }
 
 export default new Grants()
-
-export class setIsGrant {}

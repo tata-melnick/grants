@@ -1,13 +1,23 @@
 import React from "react"
+import cn from "classnames-ts"
 import styles from "./radio.module.css"
 
-const Radio: React.FC = () => {
+interface IRadioProps {
+    value: string
+    checked: string
+    onChange: (value: string) => void
+}
+
+const Radio: React.FC<IRadioProps> = ({ value, onChange, checked }) => {
+    const handleChange = () => {
+        onChange(value)
+    }
     return (
         <div className={styles.label}>
-            <label htmlFor="huey" className={styles.radio}>
-                <input hidden type="radio" id="scales" />
+            <label className={cn(styles.radio, checked && styles.radioOn)}>
+                <input hidden type="checkbox" onChange={handleChange} />
             </label>
-            <span className={styles.labelText}>Название фильтра</span>
+            <span className={styles.labelText}>{value}</span>
         </div>
     )
 }
