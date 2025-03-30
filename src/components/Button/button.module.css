@@ -1,0 +1,100 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+
+.btnFilled {
+    padding: 20px 0;
+    border-radius: 20px;
+    background: #45459d;
+    color: #ffffff;
+    font-size: 24px;
+    transition: 0.2s;
+    flex: 1;
+    font-weight: 600;
+}
+
+.btnOutline {
+    background-color: #ffffff;
+    border-radius: 30px;
+    color: #000000;
+}
+
+.btnText {
+    color: #2c4ec5;
+    font-size: 24px;
+    font-weight: 200;
+    background: none;
+    justify-content: flex-start;
+}
+
+@media (hover: hover) {
+    .btnFilled:hover {
+        background-color: #6a6ae5;
+    }
+
+    .btnOutline:hover {
+        box-shadow:
+                0 2px 35px #5eaeef,
+                15px 5px 10px #a2ccef00;
+    }
+
+    .btnText:hover {
+        color: #391689;
+    }
+
+    .btnLink:hover {
+        color: #2c4ec5;
+    }
+}
+
+@media (hover: none) {
+    .btnFilled:active {
+        background-color: #6a6ae5;
+    }
+
+    .btnOutline:active {
+        box-shadow:
+            0 2px 35px #5eaeef,
+            15px 5px 10px #a2ccef00;
+    }
+
+    .btnLink:active {
+        color: #2c4ec5;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+    .btnFilled {
+        padding: 10px 0;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 770px) {
+    .btnFilled {
+        padding: 10px 0;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+}
+@media (orientation: landscape) and (max-width: 480px) {
+    .btnFilled {
+        padding: 10px 0;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 360px) {
+    .btnFilled {
+        padding: 10px 0;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+}
