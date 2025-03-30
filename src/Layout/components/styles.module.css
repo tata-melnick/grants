@@ -379,7 +379,6 @@
         font-size: 18px;
     }
 
-
     .titleDetail {
         font-size: 24px;
         width: 100%;
@@ -409,7 +408,7 @@
     .headerDetail > .btn {
         padding: 15px 40px;
         border-radius: 10px;
-        color: #2C4EC5;
+        color: #2c4ec5;
         font-size: 14px;
         width: 200px;
     }
