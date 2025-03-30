@@ -62,25 +62,12 @@
 }
 
 .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 14px 20px;
-    border-radius: 50px;
-    border: none;
-    background-color: #ffffff;
     color: #0a0e35;
     font-size: 24px;
     font-weight: 300;
     letter-spacing: 1px;
-    transition: 0.2s;
     height: 60px;
-}
-
-.btn:hover {
-    box-shadow:
-        0 2px 35px #5eaeef,
-        15px 5px 10px #a2ccef00;
 }
 
 @media (orientation: landscape) and (max-width: 1000px) {

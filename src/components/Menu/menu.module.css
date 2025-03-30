@@ -28,8 +28,6 @@
     color: #000000;
 }
 
-
-
 @media (orientation: landscape) and (max-width: 1000px) {
     .sections {
         width: 30%;
@@ -52,24 +50,11 @@
     }
 
     .btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         padding: 15px 30px;
         margin: 0 40px;
-        border-radius: 10px;
-        border: none;
-        background-color: #ffffff;
         color: #2c4ec5;
         font-size: 14px;
-        font-weight: 300;
-        transition: 0.2s;
-    }
-
-    .btn:hover {
-        box-shadow:
-                0 2px 35px #5eaeef,
-                15px 5px 10px #a2ccef00;
+        border-radius: 10px;
     }
 }
 
@@ -94,26 +79,12 @@
         font-weight: 500;
     }
 
-
     .btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         padding: 15px 30px;
         margin: 0;
-        border-radius: 10px;
-        border: none;
-        background-color: #ffffff;
         color: #2c4ec5;
         font-size: 14px;
-        font-weight: 300;
-        transition: 0.2s;
-    }
-
-    .btn:hover {
-        box-shadow:
-                0 2px 35px #5eaeef,
-                15px 5px 10px #a2ccef00;
+        border-radius: 10px;
     }
 }
 @media (orientation: landscape) and (max-width: 480px) {
@@ -133,7 +104,6 @@
     }
 
     .btnClose {
-        border: none;
         width: 15px;
         height: 15px;
         position: absolute;
@@ -159,7 +129,6 @@
     }
 
     .btnClose {
-        border: none;
         width: 15px;
         height: 15px;
         position: absolute;

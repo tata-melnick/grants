@@ -22,11 +22,11 @@
 }
 
 .btnText {
+    color: #000000;
     font-size: 34px;
     font-weight: 600;
-    padding-left: 20px;
-    background-color: #e9f2f9;
-    border: none;
+    padding: 0 0 0 20px;
+    cursor: initial;
 }
 
 .btnWrap {
@@ -48,26 +48,31 @@
 }
 
 .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 12px 29px;
-    border-radius: 25px;
     border: solid 1px #99a7b2;
-    background-color: #ffffff;
     color: #6e7880;
     font-size: 21px;
-    transition: 0.2s;
 }
 
-.btn:hover {
-    background-color: #ffffff;
-    color: #2d4ef8;
-    box-shadow:
+@media (hover: hover) {
+    .btn:hover {
+        box-shadow:
             0 0 8px #289fff,
             0 0 0 #a2ccef00;
+    }
+
+    .btnText:hover {
+        color: #000000;
+    }
 }
 
+@media (hover: none) {
+    .btn:active {
+        box-shadow:
+            0 0 8px #289fff,
+            0 0 0 #a2ccef00;
+    }
+}
 
 @media (orientation: landscape) and (max-width: 1000px) {
     .content {
@@ -81,7 +86,7 @@
 
     .btnText {
         font-size: 16px;
-        padding-left: 10px;
+        padding: 5px 0 0 10px;
     }
 
     .btn:before {
@@ -94,6 +99,12 @@
     .btn {
         padding: 8px 15px;
         font-size: 12px;
+    }
+
+    @media (hover: none) {
+        .btnText:active {
+            color: #000000;
+        }
     }
 }
 
@@ -115,6 +126,13 @@
     .btn {
         padding: 8px 15px;
         font-size: 12px;
+    }
+
+
+    @media (hover: none) {
+        .btnText:active {
+            color: #000000;
+        }
     }
 }
 
@@ -158,12 +176,14 @@
         border-radius: 30px;
     }
 
-    .btnText:hover {
-        background-color: #ffffff;
-        color: #2d4ef8;
-        box-shadow:
-                0 0 8px #289fff,
-                0 0 0 #a2ccef00;
+    @media (hover: none) {
+        .btnText:active {
+            background-color: #ffffff;
+            color: #2d4ef8;
+            box-shadow:
+                    0 0 8px #289fff,
+                    0 0 0 #a2ccef00;
+        }
     }
 }
 
@@ -207,11 +227,13 @@
         border-radius: 30px;
     }
 
-    .btnText:hover {
-        background-color: #ffffff;
-        color: #2d4ef8;
-        box-shadow:
-                0 0 8px #289fff,
-                0 0 0 #a2ccef00;
+    @media (hover: none) {
+        .btnText:active {
+            background-color: #ffffff;
+            color: #2d4ef8;
+            box-shadow:
+                    0 0 8px #289fff,
+                    0 0 0 #a2ccef00;
+        }
     }
 }

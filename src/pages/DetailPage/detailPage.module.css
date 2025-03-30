@@ -17,11 +17,8 @@
     color: #2c4ec5;
 }
 
-.btnBack {
-    border: none;
-    color: #2c4ec5;
-    font-size: 24px;
-    font-weight: 200;
+.btnWrap:hover {
+    color: #391689;
 }
 
 .content {

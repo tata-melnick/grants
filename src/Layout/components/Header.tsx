@@ -6,6 +6,7 @@ import { useLocation, useNavigate } from "react-router-dom"
 import cn from "classnames-ts"
 import { ArrowBackIcon } from "../../icons"
 import UiState from "../../store/uiState"
+import Button from "../../components/Button"
 
 const Header: React.FC = observer(() => {
     const { grant } = Grants
@@ -30,9 +31,13 @@ const Header: React.FC = observer(() => {
                     {!isDesktop && (
                         <div className={styles.btnWrap}>
                             <ArrowBackIcon />
-                            <button onClick={goBack} className={styles.btnBack}>
+                            <Button
+                                type="text"
+                                onClick={goBack}
+                                className={styles.btnBack}
+                            >
                                 Назад
-                            </button>
+                            </Button>
                         </div>
                     )}
                     <div className={styles.wrap}>
@@ -45,14 +50,16 @@ const Header: React.FC = observer(() => {
                                 </div>
                             </div>
                             {(isDesktop || isMobilePortrait) && (
-                                <button className={styles.btn}>
+                                <Button type="outline" className={styles.btn}>
                                     Перейти на сайт
-                                </button>
+                                </Button>
                             )}
                         </div>
                     </div>
                     {isMobileLandscape && (
-                        <button className={styles.btn}>Перейти на сайт</button>
+                        <Button type="outline" className={styles.btn}>
+                            Перейти на сайт
+                        </Button>
                     )}
                 </>
             ) : (

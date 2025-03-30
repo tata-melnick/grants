@@ -1,6 +1,7 @@
 import React from "react"
 import styles from "./search.module.css"
 import { CloseIcon, SearchIcon } from "../../icons"
+import Button from "../Button"
 
 const Search: React.FC = () => {
     return (
@@ -16,11 +17,13 @@ const Search: React.FC = () => {
                         placeholder="Введите название программы"
                     />
                 </label>
-                <button className={styles.btnClose}>
+                <Button type="text" className={styles.btnClose}>
                     <CloseIcon />
-                </button>
+                </Button>
             </div>
-            <button className={styles.btn}>Искать</button>
+            <Button type="outline" className={styles.btn}>
+                Искать
+            </Button>
         </div>
     )
 }

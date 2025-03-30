@@ -8,6 +8,7 @@ import { observer } from "mobx-react-lite"
 import { ArrowBackIcon } from "../../icons"
 import { Menu, Modal } from "../../components"
 import ModalMenu from "../../store/modal"
+import Button from "../../components/Button"
 
 const DetailPage: React.FC = observer(() => {
     const { list, grant, setGrant } = Grants
@@ -28,14 +29,14 @@ const DetailPage: React.FC = observer(() => {
             {isDesktop && (
                 <div className={styles.btnWrap}>
                     <ArrowBackIcon />
-                    <button onClick={goBack} className={styles.btnBack}>
+                    <Button type="text" onClick={goBack}>
                         Назад
-                    </button>
+                    </Button>
                 </div>
             )}
             <div className={styles.content}>
                 <div className={styles.info}>
-                    {grant !== undefined && (
+                    {grant && (
                         <>
                             <BriefInfo grant={grant} />
                             <Description grant={grant} />

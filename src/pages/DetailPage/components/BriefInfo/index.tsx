@@ -6,6 +6,7 @@ import { GrantType } from "../../../../types"
 import { MenuIcon } from "../../../../icons"
 import modal from "../../../../store/modal"
 import { observer } from "mobx-react-lite"
+import Button from "../../../../components/Button"
 
 interface IBriefInfoProps {
     grant: GrantType
@@ -48,9 +49,13 @@ const BriefInfo: React.FC<IBriefInfoProps> = observer(({ grant }) => {
                     {sum} млн. руб.
                 </div>
                 {isMobile && (
-                    <button className={styles.btn} onClick={modal.open}>
+                    <Button
+                        type="text"
+                        className={styles.btn}
+                        onClick={modal.open}
+                    >
                         <MenuIcon />
-                    </button>
+                    </Button>
                 )}
             </div>
         </div>

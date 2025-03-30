@@ -4,6 +4,7 @@ import UiState from "../../store/uiState"
 import { CloseIcon } from "../../icons"
 import { observer } from "mobx-react-lite"
 import ModalMenu from "../../store/modal"
+import Button from "../Button"
 
 const Menu: React.FC = observer(() => {
     const { isTablet, isMobile } = UiState
@@ -12,24 +13,26 @@ const Menu: React.FC = observer(() => {
     return (
         <div className={styles.sections}>
             {isMobile && (
-                <button onClick={close} className={styles.btnClose}>
+                <Button type="text" onClick={close} className={styles.btnClose}>
                     <CloseIcon />
-                </button>
+                </Button>
             )}
             <h3 className={styles.titleSections}>Разделы</h3>
             <ol className={styles.list}>
-                <a href={"#briefInfo"}>
+                <Button link="#briefInfo">
                     <li className={styles.item}>Краткая информация</li>
-                </a>
-                <a href={"#description"}>
+                </Button>
+                <Button link="#description">
                     <li className={styles.item}>Основные сведения о гранте</li>
-                </a>
-                <a href={"#requirements"}>
+                </Button>
+                <Button link="#requirements">
                     <li className={styles.item}>Требования для участия</li>
-                </a>
+                </Button>
             </ol>
             {isTablet && (
-                <button className={styles.btn}>Перейти на сайт</button>
+                <Button type="outline" className={styles.btn}>
+                    Перейти на сайт
+                </Button>
             )}
         </div>
     )
