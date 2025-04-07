@@ -1,4 +1,3 @@
-export { GrantIcon } from "./Grant"
 export { SearchIcon } from "./Search"
 export { CloseIcon } from "./Close"
 export { ArrowBackIcon } from "./ArrowBack"
