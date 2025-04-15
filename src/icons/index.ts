@@ -1,6 +1,0 @@
-export { SearchIcon } from "./Search"
-export { CloseIcon } from "./Close"
-export { ArrowBackIcon } from "./ArrowBack"
-export { ArrowIcon } from "./Arrow"
-export { CalendarIcon } from "./Calendar"
-export { MenuIcon } from "./Menu"
