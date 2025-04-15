@@ -74,14 +74,58 @@
     }
 }
 
-@media (orientation: landscape) and (max-width: 1000px) {
+@media (max-width: 1600px) {
+    .btnText {
+        font-size: 30px;
+    }
+
+    .btnWrap {
+        padding: 10px 10px 0;
+    }
+
+    .btn:before {
+        top: 12px;
+        left: -74px;
+        border-bottom: 75px solid #ffffff;
+        border-left: 80px solid transparent;
+    }
+
+    .btn {
+        padding: 10px 25px;
+        border: solid 1px #99a7b2;
+        color: #6e7880;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1480px) {
+    .btnText {
+        font-size: 22px;
+    }
+
+    .btn:before {
+        top: 12px;
+        left: -74px;
+        border-bottom: 75px solid #ffffff;
+        border-left: 80px solid transparent;
+    }
+
+    .btn {
+        padding: 8px 22px;
+        border: solid 1px #99a7b2;
+        color: #6e7880;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1200px) {
     .content {
         padding: 0 0 50px;
         gap: 20px;
     }
 
     .filters {
-        width: 34%;
+        width: 24%;
     }
 
     .btnText {
@@ -100,22 +144,16 @@
         padding: 8px 15px;
         font-size: 12px;
     }
-
-    @media (hover: none) {
-        .btnText:active {
-            color: #000000;
-        }
-    }
 }
 
-@media (orientation: portrait) and (max-width: 770px) {
+@media (max-width: 1000px) {
     .content {
         padding: 0 0 50px;
         gap: 10px;
     }
 
     .filters {
-        width: 43%;
+        width: 27%;
     }
 
     .btnText {
@@ -135,7 +173,7 @@
     }
 }
 
-@media (orientation: landscape) and (max-width: 480px) {
+@media (max-width: 768px) {
     .content {
         flex-direction: column;
         padding: 0 0 50px;
@@ -186,7 +224,7 @@
     }
 }
 
-@media (orientation: portrait) and (max-width: 360px) {
+@media (max-width: 480px) {
     .content {
         flex-direction: column;
         padding: 0 0 50px;

@@ -57,8 +57,7 @@ export type ActiveFilters = {
 
 export enum ScreenType {
     Desktop = "Desktop",
-    TabletPortrait = "TabletPortrait",
-    TabletLandscape = "TabletLandscape",
+    Tablet = "Tablet",
     MobilePortrait = "MobilePortrait",
     MobileLandscape = "MobileLandscape",
 }

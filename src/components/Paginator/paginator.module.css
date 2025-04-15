@@ -70,7 +70,7 @@
     font-weight: 400;
 }
 
-@media (orientation: landscape) and (max-width: 1000px) {
+@media (max-width: 1200px) {
     .container {
         padding: 0 15px;
         gap: 3px;
@@ -119,44 +119,14 @@
     }
 }
 
-@media (orientation: portrait) and (max-width: 770px) {
+@media (max-width: 1000px) {
     .container {
         padding: 0 5px;
-        gap: 3px;
-    }
-
-    .arrow > svg {
-        width: 10px;
-        height: 15px;
-    }
-
-    .arrow:first-child {
-        margin-right: 15px;
-    }
-
-    .arrowForward {
-        transform: rotate(180deg);
-        margin-left: 15px;
-    }
-
-    .button {
-        width: 25px;
-        height: 28px;
-        font-size: 12px;
-    }
-
-    .button:hover {
-        border-radius: 8px;
-    }
-
-    .buttonActive {
-        border-radius: 8px;
     }
 }
-@media (orientation: landscape) and (max-width: 480px) {
+@media (max-width: 768px) {
     .container {
         padding: 0;
-        gap: 3px;
         justify-content: center;
     }
 
@@ -170,7 +140,6 @@
     }
 
     .arrowForward {
-        transform: rotate(180deg);
         margin-left: 20px;
     }
 
@@ -178,49 +147,5 @@
         width: 28px;
         height: 30px;
         font-size: 16px;
-    }
-
-    .button:hover {
-        border-radius: 8px;
-    }
-
-    .buttonActive {
-        border-radius: 8px;
-    }
-}
-
-@media (orientation: portrait) and (max-width: 360px) {
-    .container {
-        padding: 0;
-        gap: 3px;
-        justify-content: center;
-    }
-
-    .arrow > svg {
-        width: 15px;
-        height: 20px;
-    }
-
-    .arrow:first-child {
-        margin-right: 20px;
-    }
-
-    .arrowForward {
-        transform: rotate(180deg);
-        margin-left: 20px;
-    }
-
-    .button {
-        width: 28px;
-        height: 30px;
-        font-size: 16px;
-    }
-
-    .button:hover {
-        border-radius: 8px;
-    }
-
-    .buttonActive {
-        border-radius: 8px;
     }
 }

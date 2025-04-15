@@ -14,7 +14,6 @@
     color: #ffffff;
     font-size: 24px;
     transition: 0.2s;
-    flex: 1;
     font-weight: 600;
 }
 
@@ -30,6 +29,7 @@
     font-weight: 200;
     background: none;
     justify-content: flex-start;
+    gap: 15px;
 }
 
 @media (hover: hover) {
@@ -68,7 +68,7 @@
     }
 }
 
-@media (orientation: landscape) and (max-width: 1000px) {
+@media (max-width: 1200px) {
     .btnFilled {
         padding: 10px 0;
         border-radius: 5px;
@@ -76,24 +76,13 @@
     }
 }
 
-@media (orientation: portrait) and (max-width: 770px) {
+@media (max-width: 1000px) {
     .btnFilled {
-        padding: 10px 0;
-        border-radius: 5px;
         font-size: 12px;
     }
 }
-@media (orientation: landscape) and (max-width: 480px) {
+@media (max-width: 768px) {
     .btnFilled {
-        padding: 10px 0;
-        border-radius: 10px;
-        font-size: 16px;
-    }
-}
-
-@media (orientation: portrait) and (max-width: 360px) {
-    .btnFilled {
-        padding: 10px 0;
         border-radius: 10px;
         font-size: 16px;
     }

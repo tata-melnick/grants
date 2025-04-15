@@ -24,7 +24,7 @@
     gap: 30px;
 }
 
-@media (orientation: landscape) and (max-width: 1000px) {
+@media (max-width: 1200px) {
     .sections {
         gap: 25px;
         padding: 30px 15px 20px;
@@ -44,40 +44,9 @@
     }
 }
 
-@media (orientation: portrait) and (max-width: 770px) {
-    .sections {
-        gap: 25px;
-        padding: 30px 15px 20px;
-        border-radius: 20px 0 20px 20px;
-    }
-
-    .section {
-        gap: 25px;
-    }
-
-    .titleSection {
-        font-size: 14px;
-    }
-
-    .filter {
-        gap: 20px;
-    }
-}
-
-@media (orientation: landscape) and (max-width: 480px) {
+@media (max-width: 768px) {
     .sections {
         padding: 25px;
-        border-radius: 30px;
-    }
-
-    .titleSection {
-        font-size: 16px;
-    }
-}
-
-@media (orientation: portrait) and (max-width: 360px) {
-    .sections {
-        padding: 25px 20px;
         border-radius: 30px;
     }
 

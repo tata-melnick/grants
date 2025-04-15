@@ -1,6 +1,6 @@
 import { action, makeObservable, observable } from "mobx"
 
-class ModalMenu {
+class Modal {
     @observable modal = false
 
     constructor() {
@@ -10,4 +10,4 @@ class ModalMenu {
     @action open = () => (this.modal = true)
     @action close = () => (this.modal = false)
 }
-export default new ModalMenu()
+export default new Modal()

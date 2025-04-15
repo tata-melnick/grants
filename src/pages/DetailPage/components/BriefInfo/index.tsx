@@ -40,7 +40,7 @@ const BriefInfo: React.FC<IBriefInfoProps> = observer(({ grant }) => {
                     Размер гранта:
                 </div>
                 <div className={cn(styles.text, styles.textOne)}>
-                    Подача заявок до {status.to}
+                    Подача заявок {!isMobile && <br />} до {status.to}
                 </div>
                 <div className={cn(styles.text, styles.textTwo)}>
                     {endTime} месяцев

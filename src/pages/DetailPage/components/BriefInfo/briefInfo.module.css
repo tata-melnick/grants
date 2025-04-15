@@ -10,9 +10,10 @@
     border-radius: 35px;
     padding: 55px 50px;
     display: grid;
-    grid-template-columns: repeat(3, 230px);
+    grid-template-columns: repeat(3, 210px);
     grid-template-rows: repeat(2, 80px);
-    column-gap: 110px;
+    justify-content: space-between;
+    column-gap: 20px;
     row-gap: 20px;
 }
 
@@ -25,7 +26,28 @@
     color: #2c4ec5;
 }
 
-@media (orientation: landscape) and (max-width: 1000px) {
+@media (max-width: 1600px) {
+    .title {
+        font-size: 32px;
+    }
+
+    .briefInfo {
+        padding: 50px 45px;
+        grid-template-columns: repeat(3, 185px);
+        grid-template-rows: repeat(2, 70px);
+    }
+
+    .condition {
+        font-size: 22px;
+    }
+
+    .text {
+        font-size: 26px;
+        color: #2c4ec5;
+    }
+}
+
+@media (max-width: 1200px) {
     .title {
         font-size: 16px;
         padding-left: 20px;
@@ -50,31 +72,23 @@
     }
 }
 
-@media (orientation: portrait) and (max-width: 770px) {
+@media (max-width: 1000px) {
     .title {
-        font-size: 16px;
         padding-left: 15px;
     }
 
     .briefInfo {
         padding: 20px 15px 25px;
-        border-radius: 16px;
         grid-template-columns: repeat(3, 125px);
         grid-template-rows: repeat(2, 35px);
         column-gap: 45px;
-        row-gap: 15px;
     }
 
     .condition {
         font-size: 14px;
-        font-weight: 400;
-    }
-
-    .text {
-        font-size: 14px;
     }
 }
-@media (orientation: landscape) and (max-width: 480px) {
+@media (max-width: 768px) {
     .title {
         padding-left: 15px;
     }
@@ -88,8 +102,6 @@
     }
 
     .condition {
-        font-size: 14px;
-        font-weight: 400;
         margin-bottom: 10px;
     }
 
@@ -138,63 +150,15 @@
     }
 }
 
-@media (orientation: portrait) and (max-width: 360px) {
+@media (max-width: 480px) {
     .briefInfo {
-        padding: 20px 15px 20px;
         column-gap: 45px;
         row-gap: 20px;
-        grid-template-columns: repeat(1, 100%);
-        grid-template-rows: repeat(6, max-content);
-        position: relative;
     }
 
     .condition {
         font-size: 14px;
         font-weight: 400;
         height: 10px;
-    }
-
-    .conditionOne {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .conditionTwo {
-        grid-column: 1;
-        grid-row: 3;
-    }
-
-    .conditionThree {
-        grid-column: 1;
-        grid-row: 5;
-    }
-
-    .text {
-        font-size: 14px;
-        height: 20px;
-    }
-
-    .textOne {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .textTwo {
-        grid-column: 1;
-        grid-row: 4;
-    }
-
-    .textThree {
-        grid-column: 1;
-        grid-row: 6;
-        margin-bottom: 0;
-    }
-
-    .btn {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        border: none;
-        background-color: transparent;
     }
 }

@@ -4,14 +4,14 @@ import { Filters, Grants } from "../../components"
 import { observer } from "mobx-react-lite"
 import UiState from "../../store/uiState"
 import GrantsState from "../../store/grant"
-import Popup from "../../components/Popup"
-import PopupFilters from "../../store/popup"
+import Modal from "../../store/modal"
 import Button from "../../components/Button"
+import { FiltersModal } from "../../modals"
 
 const MainPage: React.FC = observer(() => {
     const { isMobile } = UiState
     const { resetFilters } = GrantsState
-    const { popup, openPopup, closePopup } = PopupFilters
+    const { modal, open, close } = Modal
 
     return (
         <div className={styles.content}>
@@ -19,7 +19,7 @@ const MainPage: React.FC = observer(() => {
                 <div className={styles.wrap}>
                     <Button
                         type="text"
-                        onClick={popup ? closePopup : openPopup}
+                        onClick={modal ? close : open}
                         className={styles.btnText}
                     >
                         Фильтр
@@ -35,11 +35,7 @@ const MainPage: React.FC = observer(() => {
                     </div>
                 </div>
                 {!isMobile && <Filters />}
-                {isMobile && (
-                    <Popup open={popup}>
-                        <Filters />
-                    </Popup>
-                )}
+                {isMobile && <FiltersModal open={modal} onClose={close} />}
             </div>
             <Grants />
         </div>

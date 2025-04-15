@@ -16,14 +16,14 @@
 
 .rangeContainer {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     width: 100%;
     margin-bottom: 25px;
 }
 
 .range {
     padding: 5px 15px;
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -64,7 +64,6 @@
     font-size: 20px;
     display: flex;
     align-items: center;
-    gap: 15px;
     width: 100%;
 }
 
@@ -72,16 +71,61 @@
     color: #99a7b2;
 }
 
-.active {
+.rangeDate > .active {
     color: #2d4ef8;
 }
 
 .date {
     display: inline-block;
-    text-align: center;
+    width: 70%;
+    margin-left: 20px;
+    border: none;
+    font-size: 21px;
+    color: #99a7b2;
+    padding-top: 3px;
 }
 
-@media (orientation: landscape) and (max-width: 1000px) {
+.date:focus-visible {
+    outline: none;
+}
+
+@media (max-width: 1800px) {
+    .rangeIcon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .date {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .rangeIcon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .date {
+        font-size: 16px;
+        margin-left: 15px;
+        padding-top: 7px;
+    }
+}
+
+@media (max-width: 1480px) {
+    .range {
+        padding: 5px;
+    }
+
+    .date {
+        font-size: 14px;
+        margin-left: 10px;
+        padding-top: 7px;
+    }
+}
+
+@media (max-width: 1200px) {
     .rangeContainer {
         margin-bottom: 10px;
     }
@@ -106,11 +150,7 @@
     }
 }
 
-@media (orientation: portrait) and (max-width: 770px) {
-    .rangeContainer {
-        margin-bottom: 10px;
-    }
-
+@media (max-width: 1000px) {
     .range {
         padding: 5px 10px 5px 3px;
     }
@@ -121,7 +161,6 @@
 
     .rangeTitle {
         font-size: 10px;
-        text-align: start;
     }
 
     .rangeIcon {
@@ -131,21 +170,16 @@
 
     .rangeDate {
         font-size: 10px;
-        gap: 10px;
     }
 }
-@media (orientation: landscape) and (max-width: 480px) {
-    .rangeContainer {
-        margin-bottom: 10px;
-    }
 
+@media (max-width: 768px) {
     .range {
         padding: 10px 15px;
     }
 
     .rangeTitle {
         font-size: 16px;
-        text-align: start;
     }
 
     .rangeIcon {
@@ -155,31 +189,15 @@
 
     .rangeDate {
         font-size: 16px;
-        gap: 10px;
     }
 }
 
-@media (orientation: portrait) and (max-width: 360px) {
-    .rangeContainer {
-        margin-bottom: 10px;
-    }
-
-    .range {
-        padding: 10px 15px;
-    }
-
+@media (max-width: 480px) {
     .rangeTitle {
         font-size: 14px;
-        text-align: start;
-    }
-
-    .rangeIcon {
-        width: 25px;
-        height: 25px;
     }
 
     .rangeDate {
         font-size: 14px;
-        gap: 10px;
     }
 }

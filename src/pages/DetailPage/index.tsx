@@ -6,9 +6,10 @@ import Grants from "../../store/grant"
 import UiState from "../../store/uiState"
 import { observer } from "mobx-react-lite"
 import { ArrowBackIcon } from "../../icons"
-import { Menu, Modal } from "../../components"
+import { Menu } from "../../components"
 import ModalMenu from "../../store/modal"
 import Button from "../../components/Button"
+import { MenuModal } from "../../modals"
 
 const DetailPage: React.FC = observer(() => {
     const { list, grant, setGrant } = Grants
@@ -24,29 +25,31 @@ const DetailPage: React.FC = observer(() => {
         navigate("/")
     }
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div className={styles.wrap}>
             {isDesktop && (
                 <div className={styles.btnWrap}>
-                    <ArrowBackIcon />
                     <Button type="text" onClick={goBack}>
+                        <ArrowBackIcon />
                         Назад
                     </Button>
                 </div>
             )}
-            <div className={styles.content}>
-                <div className={styles.info}>
-                    {grant && (
-                        <>
-                            <BriefInfo grant={grant} />
-                            <Description grant={grant} />
-                            <Requirements grant={grant} />
-                        </>
-                    )}
-                </div>
-                {!isMobile && <Menu />}
+            <div className={styles.info}>
+                {grant && (
+                    <>
+                        <BriefInfo grant={grant} />
+                        <Description grant={grant} />
+                        <Requirements grant={grant} />
+                    </>
+                )}
             </div>
-            <Modal open={modal} onClose={close} />
+            {!isMobile && <Menu />}
+            <MenuModal open={modal} onClose={close} />
         </div>
     )
 })

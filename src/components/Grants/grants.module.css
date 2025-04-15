@@ -3,25 +3,19 @@
     height: 100%;
 }
 
-@media (orientation: landscape) and (max-width: 1000px) {
+@media (max-width: 1200px) {
     .content {
         width: 76%;
     }
 }
 
-@media (orientation: portrait) and (max-width: 770px) {
+@media (max-width: 1000px) {
     .content {
-        width: 61%;
+        width: 73%;
     }
 }
 
-@media (orientation: landscape) and (max-width: 1000px) {
-    .content {
-        width: 100%;
-    }
-}
-
-@media (orientation: portrait) and (max-width: 770px) {
+@media (max-width: 768px) {
     .content {
         width: 100%;
     }

@@ -5,9 +5,11 @@ import {
     observable,
     autorun,
     computed,
+    reaction,
 } from "mobx"
 import { ActiveFilters, Filters, GrantType, ListGrant } from "../types"
 import GRANTS from "../mock/grants.json"
+import { ChangeEvent } from "react"
 
 const defaultFilters: Filters = {
     stage: { title: "Стадия проекта", type: "c", items: new Set<string>() },
@@ -54,6 +56,7 @@ class Grants {
     @observable grant: GrantType | null = null
     @observable filters: Filters = defaultFilters
     @observable activeFilters: ActiveFilters = defaultActiveFilters
+    @observable searchValue: string = ""
 
     @computed get list() {
         let result = this._list
@@ -130,6 +133,15 @@ class Grants {
                 })
             }
         })
+
+        reaction(
+            () => this.searchValue,
+            () => {
+                if (!this.searchValue) {
+                    this._list = [...GRANTS]
+                }
+            }
+        )
     }
 
     @action setGrant = (id: string | undefined) => {
@@ -142,6 +154,20 @@ class Grants {
 
     @action changeFilter = (key: string, value: string[]) => {
         this.activeFilters[key] = value
+    }
+
+    @action setSearchValue = (e: ChangeEvent<HTMLInputElement>) => {
+        this.searchValue = e.target.value
+    }
+
+    @action search = () => {
+        this._list = this._list.filter((el) =>
+            el.name.toLowerCase().includes(this.searchValue.toLowerCase())
+        )
+    }
+
+    @action clearSearch = () => {
+        this.searchValue = ""
     }
 }
 

@@ -12,7 +12,7 @@
     justify-content: center;
     width: 63%;
     height: 70px;
-    background-color: #ffffff;
+    background: #ffffff;
     border-radius: 50px;
     padding: 17px 25px;
     position: relative;
@@ -23,22 +23,24 @@
     height: 100%;
 }
 
-.searchLb > input {
+.input {
     border: none;
     font-size: 21px;
     color: #99a7b2;
+    background: #ffffff;
     width: 100%;
     height: 100%;
     font-family: "Open Sans", sans-serif;
 }
 
-.searchLb > input::placeholder {
+.input::placeholder {
     color: #99a7b2;
     font-family: "Open Sans", sans-serif;
 }
 
-.searchLb > input:focus {
+.input:focus {
     border: #99a7b2;
+    background: #ffffff;
     outline: none;
 }
 
@@ -70,7 +72,7 @@
     height: 60px;
 }
 
-@media (orientation: landscape) and (max-width: 1000px) {
+@media (max-width: 1200px) {
     .wrap {
         margin-bottom: 20px;
         gap: 15px;
@@ -117,9 +119,8 @@
     }
 }
 
-@media (orientation: portrait) and (max-width: 770px) {
+@media (max-width: 1000px) {
     .wrap {
-        margin-bottom: 20px;
         gap: 10px;
     }
 
@@ -127,13 +128,6 @@
         width: 65%;
         height: 30px;
         padding: 6px 15px;
-    }
-
-    .searchLb {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
     }
 
     .searchLb > input {
@@ -158,16 +152,13 @@
 
     .btn {
         padding: 7px 15px;
-        font-size: 14px;
-        letter-spacing: 1px;
         height: 30px;
     }
 }
 
-@media (orientation: landscape) and (max-width: 480px) {
+@media (max-width: 768px) {
     .wrap {
         flex-direction: column;
-        gap: 10px;
     }
 
     .search {
@@ -178,39 +169,6 @@
 
     .searchLb > input {
         font-size: 16px;
-    }
-
-    .searchIcon {
-        margin-right: 15px;
-    }
-
-    .searchIcon > svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .btnClose {
-        top: 10px;
-        right: 15px;
-        width: 16px;
-        height: 16px;
-    }
-
-    .btn {
-        display: none;
-    }
-}
-
-@media (orientation: portrait) and (max-width: 360px) {
-    .wrap {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .search {
-        width: 100%;
-        height: 40px;
-        padding: 12px 15px;
     }
 
     .searchIcon {

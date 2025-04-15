@@ -7,17 +7,17 @@ import Grants from "../../store/grant"
 import { observer } from "mobx-react-lite"
 import UiState from "../../store/uiState"
 
-let count: number = 3
+let count: number = 7
 
 const ListGrant: React.FC = observer(() => {
     const { list } = Grants
-    const { isDesktop, isTablet, isMobile, screenType } = UiState
+    const { isMobile, isTablet, isDesktop, screenType } = UiState
     const [page, setPage] = useState<number>(0)
     const [grantsOnPage, setGrantsOnPage] = useState<ListGrant>([])
 
     useEffect(() => {
-        if (isDesktop) count = 3
-        if (isTablet) count = 4
+        if (isDesktop) count = 7
+        if (isTablet) count = 9
         if (isMobile) count = 3
         setGrantsOnPage(list.slice(page * count, page * count + count))
     }, [page, list, screenType])
