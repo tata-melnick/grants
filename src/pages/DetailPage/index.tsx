@@ -17,6 +17,7 @@ const DetailPage: React.FC = observer(() => {
     const { modal, close } = ModalMenu
     const navigate = useNavigate()
     const { id } = useParams<{ id: string }>()
+
     useEffect(() => {
         if (id !== "") setGrant(id)
     }, [list, id, setGrant])

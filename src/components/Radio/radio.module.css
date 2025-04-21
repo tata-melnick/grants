@@ -73,7 +73,7 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
     .labelText {
         font-size: 12px;
         margin-left: 30px;
@@ -111,7 +111,7 @@
         left: 5px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .labelText {
         font-size: 16px;
         margin-left: 40px;

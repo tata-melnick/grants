@@ -10,6 +10,7 @@ import {
 import { ActiveFilters, Filters, GrantType, ListGrant } from "../types"
 import GRANTS from "../mock/grants.json"
 import { ChangeEvent } from "react"
+import calendar, { Calendar } from "./calendar"
 
 const defaultFilters: Filters = {
     stage: { title: "Стадия проекта", type: "c", items: new Set<string>() },
@@ -39,6 +40,7 @@ const defaultFilters: Filters = {
         type: "r",
         items: new Set<string>(),
     },
+
 }
 
 const defaultActiveFilters: ActiveFilters = {
@@ -99,10 +101,17 @@ class Grants {
                 )
             )
         }
+        const { start, end } = this.calendar;
+        if (start && end) {
+            result = result.filter((el) => {
+                const timeEnd = new Date(el.status.to).getTime()
+                return timeEnd >= start.getTime() && timeEnd <= end.getTime()
+            })
+        }
         return result
     }
 
-    constructor() {
+    constructor(private calendar: Calendar) {
         makeObservable(this)
 
         autorun(() => {
@@ -150,6 +159,7 @@ class Grants {
 
     @action resetFilters = () => {
         this.activeFilters = defaultActiveFilters
+        this.calendar.reset()
     }
 
     @action changeFilter = (key: string, value: string[]) => {
@@ -171,4 +181,4 @@ class Grants {
     }
 }
 
-export default new Grants()
+export default new Grants(calendar)

@@ -15,7 +15,10 @@ class UiState {
     }
 
     @computed get isTablet() {
-        return this.screenType === ScreenType.Tablet
+        return (
+            this.screenType === ScreenType.TabletLandscape ||
+            this.screenType === ScreenType.TabletPortrait
+        )
     }
 
     @computed get isMobile() {
@@ -34,20 +37,24 @@ class UiState {
     }
 
     @action checkWindowSize = () => {
-        const width = window.outerWidth
-        if (width > 1200) {
+        const width = window.innerWidth
+        if (width > 1280) {
             this.screenType = ScreenType.Desktop
             return
         }
-        if (width > 768 && width <= 1200) {
-            this.screenType = ScreenType.Tablet
+        if (width <= 1280 && width > 1000) {
+            this.screenType = ScreenType.TabletLandscape
             return
         }
-        if (width > 480 && width <= 768) {
+        if (width <= 1000 && width > 900) {
+            this.screenType = ScreenType.TabletPortrait
+            return
+        }
+        if (width <= 900 && width > 480) {
             this.screenType = ScreenType.MobileLandscape
             return
         }
-        if (width <= 768) {
+        if (width <= 480) {
             this.screenType = ScreenType.MobilePortrait
             return
         }

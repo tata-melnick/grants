@@ -47,7 +47,7 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
     .title {
         font-size: 16px;
         padding-left: 20px;
@@ -88,7 +88,7 @@
         font-size: 14px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .title {
         padding-left: 15px;
     }
@@ -147,6 +147,13 @@
         bottom: 0;
         border: none;
         background-color: transparent;
+        transition: none;
+    }
+
+    .fixed {
+        position: fixed;
+        right: 10px;
+        bottom: calc(100vh - 10%);
     }
 }
 
@@ -160,5 +167,14 @@
         font-size: 14px;
         font-weight: 400;
         height: 10px;
+    }
+
+    .btn {
+        bottom: 0;
+    }
+
+    .fixed {
+        position: fixed;
+        bottom: calc(100% - 20%);
     }
 }

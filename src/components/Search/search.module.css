@@ -72,7 +72,7 @@
     height: 60px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
     .wrap {
         margin-bottom: 20px;
         gap: 15px;
@@ -156,7 +156,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .wrap {
         flex-direction: column;
     }

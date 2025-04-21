@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import UiState from "../../../../store/uiState"
 import cn from "classnames-ts"
 import styles from "./briefInfo.module.css"
@@ -7,6 +7,7 @@ import { MenuIcon } from "../../../../icons"
 import modal from "../../../../store/modal"
 import { observer } from "mobx-react-lite"
 import Button from "../../../../components/Button"
+import { formatDate } from "../../../../utils"
 
 interface IBriefInfoProps {
     grant: GrantType
@@ -15,7 +16,21 @@ interface IBriefInfoProps {
 
 const BriefInfo: React.FC<IBriefInfoProps> = observer(({ grant }) => {
     const { projectStage, status, sum, endTime } = grant
-    const { isMobile } = UiState
+    const { isMobile, isMobileLandscape, isMobilePortrait } = UiState
+    const [scroll, setScroll] = useState<boolean>(false)
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (
+                (isMobileLandscape && window.scrollY > 520) ||
+                (isMobilePortrait && window.scrollY > 720)
+            ) {
+                setScroll(true)
+            } else {
+                setScroll(false)
+            }
+        })
+    }, [scroll, isMobileLandscape, isMobilePortrait])
 
     return (
         <div id="briefInfo">
@@ -40,7 +55,8 @@ const BriefInfo: React.FC<IBriefInfoProps> = observer(({ grant }) => {
                     Размер гранта:
                 </div>
                 <div className={cn(styles.text, styles.textOne)}>
-                    Подача заявок {!isMobile && <br />} до {status.to}
+                    Подача заявок {!isMobile && <br />} до{" "}
+                    {formatDate(status.to)}
                 </div>
                 <div className={cn(styles.text, styles.textTwo)}>
                     {endTime} месяцев
@@ -51,7 +67,10 @@ const BriefInfo: React.FC<IBriefInfoProps> = observer(({ grant }) => {
                 {isMobile && (
                     <Button
                         type="text"
-                        className={styles.btn}
+                        className={cn(
+                            styles.btn,
+                            scroll === true && styles.fixed
+                        )}
                         onClick={modal.open}
                     >
                         <MenuIcon />

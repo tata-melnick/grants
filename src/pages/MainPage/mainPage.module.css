@@ -118,7 +118,7 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
     .content {
         padding: 0 0 50px;
         gap: 20px;
@@ -173,7 +173,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .content {
         flex-direction: column;
         padding: 0 0 50px;

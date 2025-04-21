@@ -3,6 +3,7 @@ import styles from "./grant.module.css"
 import { GrantType } from "../../../types"
 import { useNavigate } from "react-router-dom"
 import Button from "../../Button"
+import { formatDate } from "../../../utils"
 
 interface IGrantProps {
     detail: GrantType
@@ -40,7 +41,7 @@ const Grant: React.FC<IGrantProps> = ({ detail }) => {
                 <div className={styles.infoSection}>
                     <h3 className={styles.titleInfo}>Статус конкурса</h3>
                     <p className={styles.textInfo}>
-                        с {status.from} по {status.to}
+                        с {formatDate(status.from)} по {formatDate(status.to)}
                     </p>
                 </div>
                 <div className={styles.infoSection}>

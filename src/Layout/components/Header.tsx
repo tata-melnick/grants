@@ -26,43 +26,7 @@ const Header: React.FC = observer(() => {
                 pathname !== "/" && styles.headerDetail
             )}
         >
-            {pathname !== "/" ? (
-                <>
-                    {!isDesktop && (
-                        <div className={styles.btnWrap}>
-                            <ArrowBackIcon />
-                            <Button
-                                type="text"
-                                onClick={goBack}
-                                className={styles.btnBack}
-                            >
-                                Назад
-                            </Button>
-                        </div>
-                    )}
-                    <div className={styles.wrap}>
-                        <h1 className={styles.titleDetail}>{grant?.name}</h1>
-                        <div className={styles.providesWrap}>
-                            <div className={styles.provides}>
-                                <div>Организатор конкурса:</div>
-                                <div className={styles.text}>
-                                    {grant?.provides}
-                                </div>
-                            </div>
-                            {(isDesktop || isMobilePortrait) && (
-                                <Button type="outline" className={styles.btn}>
-                                    Перейти на сайт
-                                </Button>
-                            )}
-                        </div>
-                    </div>
-                    {isMobileLandscape && (
-                        <Button type="outline" className={styles.btn}>
-                            Перейти на сайт
-                        </Button>
-                    )}
-                </>
-            ) : (
+            {pathname === "/" ? (
                 <>
                     <h1 className={styles.title}>
                         Подбери программу для реализации своего проекта
@@ -70,6 +34,72 @@ const Header: React.FC = observer(() => {
                     <div className={styles.img}>
                         <img src="/public/group.png" alt="" />
                     </div>
+                </>
+            ) : (
+                <>
+                    {isDesktop && (
+                        <div className={styles.wrap}>
+                            <h1 className={styles.titleDetail}>
+                                {grant?.name}
+                            </h1>
+                            <div className={styles.providesWrap}>
+                                <div className={styles.provides}>
+                                    <div>Организатор конкурса:</div>
+                                    <div className={styles.text}>
+                                        {grant?.provides}
+                                    </div>
+                                </div>
+                                {(isDesktop || isMobilePortrait) && (
+                                    <Button
+                                        type="outline"
+                                        className={styles.btn}
+                                    >
+                                        Перейти на сайт
+                                    </Button>
+                                )}
+                            </div>
+                        </div>
+                    )}
+                    {!isDesktop && (
+                        <>
+                            <div className={styles.btnWrap}>
+                                <Button
+                                    type="text"
+                                    onClick={goBack}
+                                    className={styles.btnBack}
+                                >
+                                    <ArrowBackIcon />
+                                    Назад
+                                </Button>
+                            </div>
+                            <div className={styles.wrap}>
+                                <h1 className={styles.titleDetail}>
+                                    {grant?.name}
+                                </h1>
+                                <div className={styles.providesWrap}>
+                                    <div className={styles.provides}>
+                                        <div>Организатор конкурса:</div>
+                                        <div className={styles.text}>
+                                            {grant?.provides}
+                                        </div>
+                                    </div>
+                                    {(isDesktop || isMobilePortrait) && (
+                                        <Button
+                                            type="outline"
+                                            className={styles.btn}
+                                        >
+                                            Перейти на сайт
+                                        </Button>
+                                    )}
+                                </div>
+                            </div>
+                            {(isMobileLandscape) && (
+                                <Button type="outline" className={styles.btn}>
+                                    Перейти на сайт
+                                </Button>
+                            )}
+                        </>
+                    )}
                 </>
             )}
         </div>
