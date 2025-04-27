@@ -22,8 +22,8 @@ const BriefInfo: React.FC<IBriefInfoProps> = observer(({ grant }) => {
     useEffect(() => {
         window.addEventListener("scroll", () => {
             if (
-                (isMobileLandscape && window.scrollY > 520) ||
-                (isMobilePortrait && window.scrollY > 720)
+                (isMobileLandscape && window.scrollY > 200) ||
+                (isMobilePortrait && window.scrollY >300)
             ) {
                 setScroll(true)
             } else {

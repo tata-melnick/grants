@@ -5,9 +5,10 @@ import cn from "classnames-ts"
 import styles from "./calendar.module.css"
 import "./reset-styles.css"
 import { CalendarIcon } from "../../icons"
-import calendar, { formatNumbersDate } from "../../store/calendar"
+import calendar from "../../store/calendar"
 import { observer } from "mobx-react-lite"
 import { formatDate } from "../../utils"
+import { InputMask } from "@react-input/mask"
 
 interface ICalendarProps {
     type?: "range" | "standard"
@@ -48,9 +49,7 @@ export const Calendar = observer(
             <div className={styles.container} onMouseLeave={onBlur}>
                 {type === "range" && (
                     <div className={styles.rangeContainer}>
-                        <label
-                            className={styles.range}
-                        >
+                        <label className={styles.range}>
                             <div className={styles.rangeTitle}>
                                 Начало периода
                             </div>
@@ -63,13 +62,20 @@ export const Calendar = observer(
                                 >
                                     <CalendarIcon />
                                 </span>
-                                <input
-                                    type="text"
+                                <InputMask
+                                    mask="dd/mm/yyyy"
+                                    replacement={{ d: /\d/, m: /\d/, y: /\d/ }}
+                                    showMask={false}
+                                    // @ts-expect-error
                                     className={cn(
                                         styles.date,
                                         start && styles.active
                                     )}
-                                    value={inputStart ? formatNumbersDate(inputStart) : formatDate(start, "/")}
+                                    value={
+                                        inputStart
+                                            ? inputStart
+                                            : formatDate(start, "/")
+                                    }
                                     onInput={handleInputStart}
                                     onFocus={onFocus}
                                 />
@@ -88,13 +94,20 @@ export const Calendar = observer(
                                 >
                                     <CalendarIcon />
                                 </span>
-                                <input
-                                    type="text"
+                                <InputMask
+                                    mask="dd/mm/yyyy"
+                                    replacement={{ d: /\d/, m: /\d/, y: /\d/ }}
+                                    showMask={false}
+                                    // @ts-expect-error
                                     className={cn(
                                         styles.date,
-                                        end && styles.active
+                                        start && styles.active
                                     )}
-                                    value={inputEnd ? formatNumbersDate(inputEnd) : formatDate(end, "/")}
+                                    value={
+                                        inputEnd
+                                            ? inputEnd
+                                            : formatDate(end, "/")
+                                    }
                                     onInput={handleInputEnd}
                                     onFocus={onFocus}
                                 />

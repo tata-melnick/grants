@@ -40,7 +40,6 @@ const defaultFilters: Filters = {
         type: "r",
         items: new Set<string>(),
     },
-
 }
 
 const defaultActiveFilters: ActiveFilters = {
@@ -101,11 +100,21 @@ class Grants {
                 )
             )
         }
-        const { start, end } = this.calendar;
+        const { start, end } = this.calendar
         if (start && end) {
             result = result.filter((el) => {
-                const timeEnd = new Date(el.status.to).getTime()
-                return timeEnd >= start.getTime() && timeEnd <= end.getTime()
+                const from = new Date(el.status.from).getTime()
+                const to = new Date(el.status.to).getTime()
+
+                const startTime = start.getTime()
+                const endTime = end.getTime()
+
+                return (
+                    (from >= startTime && to <= endTime) ||
+                    (from >= startTime && from <= endTime) ||
+                    (from <= startTime && to >= endTime) ||
+                    (to >= startTime && to <= endTime)
+                )
             })
         }
         return result
